@@ -1,0 +1,22 @@
+#무면허 의사 본부용 ＮＰＣ 마족연구가 드바시
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+####### 타피오키아를 가지고 있는 경우 ########
+block Item 18631 >= 1
+
+ Window 21145,Yes,No
+     Window_YES
+       window 21146,OK
+       window_OK Item 18631 >= 1
+         Killitemall 18631
+         Giveitem 18638
+      window_OK
+     Window_NO
+       EndWindow 21147
+########## 가지고 있지 않은 경우 ##########
+block Item 18631 == 0
+ Window 21143,next
+ EndWindow 21144
+

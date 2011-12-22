@@ -1,0 +1,26 @@
+#宠物再次改造脚本 CloudyBoy编写于20070806 http://www.CloudyBoy.com
+
+
+
+######### 没有任务道具 ##########
+
+block Item 940004 != 1
+	EndWindow 8010031
+#\n有何贵干？
+
+
+########## 回答问题并更换任务道具 ##########
+
+block StrCmpChat == 8010018 && ItemSpace >= 1
+
+	KillItem 940004,1
+	GiveItem 940005,1
+	EndWindow 8010033
+#\n快点踏上旅途吧。
+
+
+########## 携带任务道具 ##########
+
+block Item 940004 == 1
+	EndWindow 8010017
+#\n亚留特村中的南希，他的女儿叫什么名字？

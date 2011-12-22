@@ -1,0 +1,90 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　선물가게（고블린 그림 접시）의 권
+
+###　고블린 그림 접시를 소지
+block Item_607909 >= 1
+	EndWindow 6360001
+
+
+
+###　그림 접시 이외의 선물을 소지
+block Item_607908 >= 1 || Item_607910 >= 1 || Item_607911 >= 1 || Item_607912 >= 1 || Item_607913 >= 1
+	EndWindow 6360002
+
+
+
+###　소령의 뿔을 １개 소지
+block Item_607925 >= 1
+	Window 6360003,YES,NO
+
+		Window_YES
+			Window 6360004,OK
+
+				Window_OK Item_607925 >= 1 && ItemSpace >= 1
+					KillItem 607925,1
+					GiveItemEX 607909,1,"\n\n　그 소지품으로는 그림 접시를 줄 수 없어. 정리하도록 해.\n　정리정돈도 아트라구."
+
+				Window_OK Item_607925 >= 1
+					EndWindow 6360005
+
+				Window_OK
+					EndWindow 6360006
+
+		Window_NO
+			EndWindow 6360007
+
+
+
+###　중사 실드를 ３개 소지
+block Item_607923 >= 3
+	Window 6360008,YES,NO
+
+		Window_YES
+			Window 6360009,OK
+
+				Window_OK Item_607923 >= 3 && ItemSpace >= 1
+					KillItem 607923,3
+					GiveItemEX 607909,1,"\n\n　그 소지품으로는 그림 접시를 줄 수 없어. 정리하도록 해.\n　정리정돈도 아트라구."
+
+				Window_OK Item_607923 >= 3
+					EndWindow 6360010
+
+				Window_OK
+					EndWindow 6360011
+
+		Window_NO
+			EndWindow 6360012
+
+
+
+###　하사 바주카를 ５개 소지
+block Item_607924 >= 5
+	Window 6360013,YES,NO
+
+		Window_YES
+			Window 6360014,OK
+
+				Window_OK Item_607924 >= 5 && ItemSpace >= 1
+					KillItem 607924,5
+					GiveItemEX 607909,1,"\n\n　그 소지품으로는 그림 접시를 줄 수 없어. 정리하도록 해.\n　정리정돈도 아트라구."
+
+				Window_OK Item_607924 >= 5
+					EndWindow 6360015
+
+				Window_OK
+					EndWindow 6360016
+
+		Window_NO
+			EndWindow 6360017
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 6360018
+
+
+
+
+

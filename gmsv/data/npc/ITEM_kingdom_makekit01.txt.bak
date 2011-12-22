@@ -1,0 +1,211 @@
+#
+#방어구 수리 도구(금속)의 작성 키트
+#
+
+
+
+block
+	Window 9020024,OK
+
+
+Window_OK StrCmpChat == 9021000
+	
+	if skilllevel 218 < 1 || FP < 10
+		EndWindow 9020028
+	
+	else if Item 9611 < 2 || Item 9612 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -10
+		killItem 9611,2
+		killItem 9612,1
+		GiveItem 640004,1
+	endif
+
+block StrCmpChat == 9021001
+	
+	if skilllevel 218 < 2 || FP < 20
+		EndWindow 9020028
+	
+	else if Item 9612 < 2 || Item 9613 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -20
+		killItem 9612,2
+		killItem 9613,1
+		GiveItem 640005,1
+	endif
+
+block StrCmpChat == 9021002
+	
+	if skilllevel 218 < 3 || FP < 30
+		EndWindow 9020028
+	
+	else if Item 9613 < 2 || Item 9614 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -30
+		killItem 9613,2
+		killItem 9614,1
+		GiveItem 640006,1
+	endif
+
+block StrCmpChat == 9021003
+	
+	if skilllevel 218 < 4 || FP < 40
+		EndWindow 9020028
+	
+	else if Item 9614 < 2 || Item 9615 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -40
+		killItem 9614,2
+		killItem 9615,1
+		GiveItem 640007,1
+	endif
+
+block StrCmpChat == 9021004
+	
+	if skilllevel 218 < 5 || FP < 50
+		EndWindow 9020028
+	
+	else if Item 9615 < 2 || Item 9616 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -50
+		killItem 9615,2
+		killItem 9616,1
+		GiveItem 640008,1
+	endif
+
+block StrCmpChat == 9021005
+	
+	if skilllevel 218 < 6 || FP < 60
+		EndWindow 9020028
+	
+	else if Item 9616 < 2 || Item 9617 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -60
+		killItem 9616,2
+		killItem 9617,1
+		GiveItem 640009,1
+	endif
+
+block StrCmpChat == 9021006
+	
+	if skilllevel 218 < 7 || FP < 70
+		EndWindow 9020028
+	
+	else if Item 9617 < 2 || Item 9618 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -70
+		killItem 9617,2
+		killItem 9618,1
+		GiveItem 640010,1
+	endif
+
+block StrCmpChat == 9021007
+	
+	if skilllevel 218 < 8 || FP < 80
+		EndWindow 9020028
+	
+	else if Item 9618 < 2 || Item 9619 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -80
+		killItem 9618,2
+		killItem 9619,1
+		GiveItem 640011,1
+	endif
+
+block StrCmpChat == 9021008
+	
+	if skilllevel 218 < 9 || FP < 90
+		EndWindow 9020028
+	
+	else if Item 9619 < 2 || Item 9620 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -90
+		killItem 9619,2
+		killItem 9620,1
+		GiveItem 640012,1
+	endif
+
+block StrCmpChat == 9021009
+	
+	if skilllevel 218 < 10 || FP < 100
+		EndWindow 9020028
+	
+	else if Item 9620 < 2 || Item 9621 < 1
+		EndWindow 9020029
+	endif
+
+	else if ItemSpace == 0
+		EndWindow 10000
+	endif
+
+	else
+		SetFP -100
+		killItem 9620,2
+		killItem 9621,1
+		GiveItem 640013,1
+	endif
+
+

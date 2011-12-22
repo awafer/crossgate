@@ -1,0 +1,6 @@
+block item 795114 == 1
+killitem 795114
+giveitem 795115
+endwindow "\n\n　原来是法兰来的勇士。\n　你们一定要帮助我们击败狂战，还沙漠的和平.."
+block
+endwindow "\n\n　可恶的狂战将军，我不会放过你的！"

@@ -1,0 +1,12 @@
+#变身卡任务 珊瑚编写于20070215 QQ1758282
+#########海底村 1W/个卖糖果包装纸 #########
+block item 662001 >= 1
+	endwindow 8000023,ok
+block item 662000 >= 1
+	endwindow 8000030,ok
+block
+	Window 8000022,yes,no
+Window_NO
+Window_YES
+	addgold -10000
+	GiveItem 662001

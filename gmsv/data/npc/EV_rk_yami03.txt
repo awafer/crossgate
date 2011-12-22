@@ -1,0 +1,46 @@
+#무면허 의사 본부용 ＮＰＣ 디그 지로
+#처음으로 조건이 일치한 블록을 처리한다
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+####### 무면허 의사 심볼을 가지고 있다 ########
+block Item 18344 >= 1
+ Window 21156,OK
+  Window_OK
+  warp 0,15531,29,51
+
+####### 너스 캡을 가지고 있다 ########
+block Item 18350 >= 1
+ Window 21157,OK
+  Window_OK
+  warp 0,15531,29,51
+####### 무면허 의사 펜던트를 가지고 있다 ########
+block Item 18639 >= 1
+ Window 21156,OK
+  Window_OK
+  warp 0,15531,29,51
+
+####### 어떤 것도 가지고 있지 않다 ########
+block
+ window 21149,yes,no
+  window_no
+   endwindow 21155
+  window_yes
+   window 21151,yes,no
+    window_yes ItemSpace == 0
+     Endwindow 21150
+    window_yes gold >= 30000
+     window 21154,OK
+     window_OK
+      AddGold -30000
+      giveitem 18639
+      warp 0,15531,29,51
+     window_yes
+      window 21188,OK
+       window_OK
+       warp 0,15535,44,15
+    window_no
+     window 21152,ok
+      window_ok
+       message 21153
+       warp 0,15535,44,15

@@ -1,0 +1,19 @@
+block gold < 10000
+window "\n\n\n\n　　　　　　身上至少要有10000哦~",Ok
+block petspace == 0
+window "\n\n\n　　　　　　你的宠物满啦，\n\n　　　　　　　这年头的孩子啊~\n\n　　　　　　　　你是不是很笨吖？~",yes,no
+Window_yes 
+addgold -10000
+Endwindow "\n\n\n竟然承认自己笨！确实够笨~~\n\n千万别对自己没信心！！\n\n现实没信心的代价不止是10000啊朋友！",ok
+Window_No 
+addgold -10000
+EndWindow  "\n\n\n不笨啊？那就是不记得自己宠满咯。下次看清楚哦~\n\n不过，嘿嘿。罚你10000先~哦啦啦~~~",Ok
+block gold >= 10000
+window "\n\n我是假圣诞树=。=\n\n你可以拿5000块跟我换个可爱的宠物~\n\n嘿嘿，我是不是在打劫吖?O(∩_∩)O~~~",Yes,No
+Window_No petspace >= 1 
+Givepet 330012
+addgold -5000
+EndWindow  "\n\n真是聪明人吖~我怎么可能打劫捏~\n\n不过还是意思意思收点本钱。O(∩_∩)O~~",Ok
+Window_Yes 
+addgold -10000
+EndWindow  "\n\n\n什么？你说我打劫？那我就打劫打劫。遂你心愿吧~",Ok

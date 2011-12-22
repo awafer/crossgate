@@ -1,0 +1,82 @@
+#『첫 심부름』　　ｂｙ　토미타
+#
+#　　　루오그의 권
+
+###　루오그의 명함을 여러 개 소지
+
+block Item_607904 >= 2
+	Window 7720001,OK
+
+		Window_OK Item_607904 >= 2
+			KillItemAll 607904
+
+		Window_OK
+
+
+
+###　루오그의 명함을 소지
+
+block Item_607904 == 1
+
+	If StampCount_607904 >= 5
+		Window 7720002,OK
+
+			Window_OK ItemSpace >= 1
+				KillItemAll 607904
+				GiveItem (13631%45,13632%30,13602%10,13642%10,18450%5)
+				EndBlock
+
+			Window_OK
+				EndWindow 7720003
+				EndBlock
+
+	else
+		EndWindow 7720004
+		EndBlock
+
+	endif
+
+
+
+###　루오그에게 보내는 편지를 소지
+
+block Item_607903 >= 1
+	Window 7720005,YES,NO
+
+		Window_YES
+			Window 7720006,NEXT
+			Window 7720007,NEXT
+			Window 7720008,OK
+
+				Window_OK Item_607904 >= 1
+					EndWindow 7720009
+
+				Window_OK Item_607903 >= 1 && ItemSpace >= 1
+					KillItemAll 607903
+					GiveItemEX 607904,1,"\n\n　소지품을 정리해주지 않겠나.\n　명함을 줄 수 없어서 말이야."
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7720010
+
+				Window_OK
+					EndWindow 7720011
+
+		Window_NO
+			Window 7720012,OK
+
+				Window_OK Item_607903 >= 1
+					KillItemAll 607903
+
+				Window_OK
+
+
+
+###　편지도 명함도 소지하지 않음
+
+block
+	EndWindow 7720013
+
+
+
+
+

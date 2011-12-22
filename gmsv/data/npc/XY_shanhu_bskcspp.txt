@@ -1,0 +1,18 @@
+#变身卡任务 珊瑚编写于20070215 QQ1758282
+#########拿包装纸和露水换糖果##########
+block item 662001 == 1 && item 662002 == 1
+	killitemall 662001
+	killitemall 662002
+	giveitem 662000
+	endwindow 8000027,OK
+
+block item 662001 == 1 && item 662003 == 1
+	endwindow 8000026,OK
+#########有包装纸拿瓶子##############
+block item 662001 == 1
+	Window 8000024,next
+	Window 8000025,yes,no
+	window_yes
+	giveitem 662003,1
+	endwindow 8000026,ok
+	windows_no

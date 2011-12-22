@@ -1,0 +1,26 @@
+#宠物再次改造脚本 CloudyBoy编写于20070806 http://www.CloudyBoy.com
+
+
+
+######### 没有任务道具 ##########
+
+block Item 940006 != 1
+	EndWindow 8010031
+#\n有何贵干？
+
+
+########## 回答问题并更换任务道具 ##########
+
+block StrCmpChat == 8010022 && ItemSpace >= 1
+
+	KillItem 940006,1
+	GiveItem 940007,1
+	EndWindow 8010033
+#\n快点踏上旅途吧。
+
+
+########## 携带任务道具 ##########
+
+block Item 940006 == 1
+	EndWindow 8010021
+#\n阿巴尼斯村中学宠物技能的那个人名字是？

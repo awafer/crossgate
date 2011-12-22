@@ -1,0 +1,78 @@
+#장기 점검 사과 NPC　　ｂｙ　토미타
+#
+#　　　왕궁비서관의 권
+
+#####　2004年8月18日 이후
+
+###　용의 모래를 소지
+#block CheckRealTime 2004/8/9,20:50:00 == 1 && Item_16426 >= 1
+block CheckRealTime 2004/8/18,00:00:00 == 1 && Item_16426 >= 1
+
+	EndWindow 8340001
+
+
+
+
+###　용의 모래교환권을 소지
+#block CheckRealTime 2004/8/9,20:50:00 == 1 && Item_607930 >= 1
+block CheckRealTime 2004/8/18,00:00:00 == 1 && Item_607930 >= 1
+
+	Window 8340002,YES,NO
+
+		Window_YES
+			Window 8340003,OK
+
+				Window_OK Item_16426 >= 1
+					EndWindow 8340004
+
+				Window_OK Item_607930 >= 1 && ItemSpace >= 1
+					KillItemAll 607930
+					GiveItemEX 16426,1,"\n\n　소지품에 빈 곳이 없는 것 같습니다.\n　정리하신 후에 다시 와주십시오."
+
+				Window_OK ItemSpace >= 1
+					EndWindow 8340005
+
+				Window_OK
+					EndWindow 8340006
+
+		Window_NO
+			EndWindow 8340007
+
+
+
+###　상기 아이템을 소지하지 않음
+#block CheckRealTime 2004/8/9,20:50:00 == 1
+block CheckRealTime 2004/8/18,00:00:00 == 1
+
+	EndWindow 8340008
+
+
+
+
+
+#####　2004年8月18日 이전
+
+###　용의 모래교환권을 소지
+block Item_607930 >= 1
+	EndWindow 8340009
+
+
+
+###　용의 모래교환권을 소지하지 않음
+block
+	Window 8340010,NEXT
+	Window 8340011,OK
+
+		Window_OK Item_607930 >= 1
+			EndWindow 8340012
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607930,1,"\n\n　소지품에 빈 곳이 없는 것 같습니다.\n　정리하신 후에 다시 와주십시오."
+
+		Window_OK
+			EndWindow 8340013
+
+
+
+
+

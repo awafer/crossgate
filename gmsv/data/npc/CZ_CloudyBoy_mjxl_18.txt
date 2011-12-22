@@ -1,0 +1,5 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block
+	EndWindow "\n\n\n@c　冥界系列任务，任务详细攻略请到QQ群内共享查看\n\n"

@@ -1,0 +1,15 @@
+#
+#백의 기억（백의 제단）
+#
+
+##############  ##############
+block
+#\n\n\n\n@c　백의 기억을 사용하겠습니까?
+	Window 21241,YES,NO
+	Window_YES
+	KillItem 18766,1,(21246)
+	LeaveGroup
+	Warp 0,15540,24,24
+	Window_NO
+
+

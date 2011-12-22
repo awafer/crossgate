@@ -1,0 +1,39 @@
+block StrCmpChat != 777783 || StrCmpChat != 777784 || StrCmpChat != 777785 || StrCmpChat != 777786
+
+	Window 777782,OK
+##########  ##########
+#block StrCmpChat == 李贝留斯
+block StrCmpChat == 777783
+#你要李贝留斯吗?
+	Window 777787,OK
+#宠物栏已满，需要整理。
+	Window_OK PetSpace == 0
+	Endwindow 777791
+	Window_OK PetSpace >= 1
+你以获得宠物，请你把宠物收好。 
+	GivePet (026%100)
+	Endwindow 777779
+##########################
+block StrCmpChat == 777784
+	Window 777788,OK
+	Window_OK PetSpace == 0
+	Endwindow 777791
+	Window_OK PetSpace >= 1 
+	GivePet (616%100)
+	Endwindow 777779
+############################	
+block StrCmpChat == 777785
+	Window 777789,OK
+	Window_OK PetSpace == 0
+	Endwindow 777791
+	Window_OK PetSpace >= 1 
+	GivePet (122%100)
+	Endwindow 777779
+############################	
+block StrCmpChat == 777786
+	Window 777790,OK
+	Window_OK PetSpace == 0
+	Endwindow 777791
+	Window_OK PetSpace >= 1 
+	GivePet (25010%100)
+	Endwindow 777779

@@ -1,0 +1,356 @@
+#초보자용 쓸 것 퀘스트　　ｂｙ　토미타
+#
+#　　　꽃처녀 니코의 권
+
+###　PUK3 소지하지 않음
+block Trialflg < 8
+	EndWindow 7060001
+
+
+
+###　카프카프의 꽃（607701）을 소지
+block Item_607701 >= 1
+	EndWindow 7060002
+
+
+
+###　커다란 카프카프의 씨앗（607961）을 소지
+block Item_607961 >= 1
+
+##　레벨１１이상
+	If Level > 10
+		EndWindow 7060003
+		EndBlock
+
+
+##　레벨１０이하
+	else
+		Window 7060004,YES,NO
+
+			Window_YES Item_607961 >= 1
+				Window 7060005,OK
+
+					Window_OK Item_607961 >= 1
+						LeaveGroup
+						Warp 0,59526,189,108
+						EndBlock
+
+					Window_OK
+						EndWindow 7060006
+						EndBlock
+
+			Window_YES
+				EndWindow 7060007
+				EndBlock
+
+			Window_NO
+				EndWindow 7060008
+				EndBlock
+
+	endif
+
+
+
+###　액체비료 호화（진짜）（607959）를 소지
+block Item_607959 >= 1
+
+##　카프카프의 씨앗을 소지하지 않음
+	If Item_607955 < 1
+		EndWindow 7060009
+		EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지하고, 레벨１１이상
+	else
+		If Level > 10
+			Window 7060010,NEXT
+			Window 7060011,NEXT
+			Window 7060012,OK
+
+				Window_OK Item_607955 >= 1 && Item_607959 >= 1 && ItemSpace >= 1
+					KillItemAll 607955
+					KillItemAll 607959
+					GiveItemEX 607961,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+					EndBlock
+
+				Window_OK Item_607959 >= 1 && ItemSpace >= 1
+					EndWindow 7060013
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7060014
+					EndBlock
+
+				Window_OK
+					EndWindow 7060015
+					EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지하고, 레벨１０이하
+		else
+			Window 7060016,NEXT
+			Window 7060017,NEXT
+			Window 7060018,OK
+
+				Window_OK Item_607955 >= 1 && Item_607959 >= 1 && ItemSpace >= 1
+					KillItemAll 607955
+					KillItemAll 607959
+					GiveItemEX 607961,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+					EndBlock
+
+				Window_OK Item_607959 >= 1 && ItemSpace >= 1
+					EndWindow 7060019
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7060020
+					EndBlock
+
+				Window_OK
+					EndWindow 7060021
+					EndBlock
+
+		endif
+
+	endif
+
+
+
+###　액체비료 호화（가짜）（607960）를 소지
+block Item_607960 >= 1
+
+	LocalCount0 = Random 3,0
+
+##　카프카프의 씨앗을 소지하지 않음
+	If Item_607955 < 1
+		EndWindow 7060022
+		EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지（꽃장식１：607956）
+	else
+		If LocalCount0 == 1
+			Window 7060023,YES,NO
+
+				Window_YES Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+					Window 7060024,OK
+
+						Window_OK Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+							KillItemAll 607960
+							GiveItemEX 607956,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+							EndBlock
+
+						Window_OK Item_607960 >= 1 && ItemSpace >= 1
+							EndWindow 7060025
+							EndBlock
+
+						Window_OK ItemSpace >= 1
+							EndWindow 7060026
+							EndBlock
+
+						Window_OK
+							EndWindow 7060027
+							EndBlock
+
+					Window_YES Item_607960 >= 1 && ItemSpace >= 1
+						EndWindow 7060028
+						EndBlock
+
+					Window_YES ItemSpace >= 1
+						EndWindow 7060029
+						EndBlock
+
+					Window_YES
+						EndWindow 7060030
+						EndBlock
+
+					Window_NO
+						EndWindow 7060031
+						EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지（꽃장식２：607957）
+		else
+			If LocalCount0 == 2
+				Window 7060032,YES,NO
+
+					Window_YES Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+						Window 7060033,OK
+
+							Window_OK Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+								KillItemAll 607960
+								GiveItemEX 607957,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+								EndBlock
+
+							Window_OK Item_607960 >= 1 && ItemSpace >= 1
+								EndWindow 7060034
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								EndWindow 7060035
+								EndBlock
+
+							Window_OK
+								EndWindow 7060036
+								EndBlock
+
+						Window_YES Item_607960 >= 1 && ItemSpace >= 1
+							EndWindow 7060037
+							EndBlock
+
+						Window_YES ItemSpace >= 1
+							EndWindow 7060038
+							EndBlock
+
+						Window_YES
+							EndWindow 7060039
+							EndBlock
+
+						Window_NO
+							EndWindow 7060040
+							EndBlock
+
+
+
+##　카프카프의 씨앗（607955）을 소지（꽃장식３：607958）
+			else
+				Window 7060041,YES,NO
+
+					Window_YES Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+						Window 7060042,OK
+
+							Window_OK Item_607955 >= 1 && Item_607960 >= 1 && ItemSpace >= 1
+								KillItemAll 607960
+								GiveItemEX 607958,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+								EndBlock
+
+							Window_OK Item_607960 >= 1 && ItemSpace >= 1
+								EndWindow 7060043
+								EndBlock
+
+							Window_OK ItemSpace >= 1
+								EndWindow 7060044
+								EndBlock
+
+							Window_OK
+								EndWindow 7060045
+								EndBlock
+
+						Window_YES Item_607960 >= 1 && ItemSpace >= 1
+							EndWindow 7060046
+							EndBlock
+
+						Window_YES ItemSpace >= 1
+							EndWindow 7060047
+							EndBlock
+
+						Window_YES
+							EndWindow 7060048
+							EndBlock
+
+						Window_NO
+							EndWindow 7060049
+							EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　꽃장식（１）（607956）, 꽃장식（２）（607957）, 꽃장식（３）（607958）중 하나를 소지
+block Item_607956 >= 1 || Item_607957 >= 1 || Item_607958 >= 1
+
+##　카프카프의 씨앗（607955）을 소지
+	If Item_607955 >= 1
+		EndWindow 7060050
+		EndBlock
+
+
+##　카프카프의 씨앗（607955）을 소지하지 않음
+	else
+		EndWindow 7060051
+		EndBlock
+
+	endif
+
+
+
+###　카프카프의 씨앗（607955）을 소지
+block Item_607955 >= 1
+
+	LocalCount1 = Random 3,0
+
+##　꽃장식（１）（607956）
+	If LocalCount1 == 1
+		Window 7060052,NEXT
+		Window 7060053,NEXT
+		Window 7060054,OK
+
+			Window_OK Item_607955 >= 1 && ItemSpace >= 1
+				GiveItemEX 607956,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+				EndBlock
+
+			Window_OK ItemSpace >= 1
+				EndWindow 7060055
+				EndBlock
+
+			Window_OK
+				EndWindow 7060056
+				EndBlock
+
+
+##　꽃장식（２）（607957）
+	else
+		If LocalCount1 == 2
+			Window 7060057,NEXT
+			Window 7060058,NEXT
+			Window 7060059,OK
+
+				Window_OK Item_607955 >= 1 && ItemSpace >= 1
+					GiveItemEX 607957,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7060060
+					EndBlock
+
+				Window_OK
+					EndWindow 7060061
+					EndBlock
+
+
+##　꽃장식（３）（607958）
+		else
+			Window 7060062,NEXT
+			Window 7060063,NEXT
+			Window 7060064,OK
+
+				Window_OK Item_607955 >= 1 && ItemSpace >= 1
+					GiveItemEX 607958,1,"\n\n　오우, 소지품이 가득.\n　인생의 무거운 짐은 버려 주세~요."
+					EndBlock
+
+				Window_OK ItemSpace >= 1
+					EndWindow 7060065
+					EndBlock
+
+				Window_OK
+					EndWindow 7060066
+					EndBlock
+
+		endif
+
+	endif
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 7060067
+
+
+
+
+

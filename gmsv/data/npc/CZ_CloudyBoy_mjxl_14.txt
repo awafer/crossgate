@@ -1,0 +1,14 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Level >= 70 && Item 940112 == 1 && Item 940120 == 1
+
+	Window "\n\n\n@c　恩。想成为强者么？那就真正的堕落吧。",ok
+	Window_ok
+	Encount 3|0,2307,6,9|||||0|||350101|||||||||
+
+block Item 940112 == 1 || Level >= 69
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

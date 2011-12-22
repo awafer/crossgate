@@ -1,0 +1,119 @@
+#『채굴 트라이애슬론』　　ｂｙ　토미타
+#
+#　　　계원 키쿠의 권
+
+###　엔트리 증을 여러 개 소지
+block Item_607905 >= 2
+	EndWindow 8290001
+
+
+
+###　광부이다
+
+#　엔트리 증 소지
+block JobAncestry == 470 && Item_607905 == 1
+
+	If StampCount_607905 == 0
+		EndWindow 8290002
+		EndBlock
+
+
+	else
+		If StampCount_607905 >= 2
+			Window 8290003,NEXT
+			EndWindow 8290004
+			EndBlock
+
+
+		else
+			If StampCount_607905 == 1 && ItemCreateTime_607905 > 60
+				Window 8290005,OK
+
+					Window_OK Item_607905 >= 1
+						KillItemAll 607905
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+
+			else
+				If StampCount_607905 == 1 && ItemCreateTime_607905 <= 60 && Item_6434 >= 1
+
+					Window 8290006,YES,NO
+
+						Window_YES
+							Window 8290007,NEXT
+							Window8290008,OK
+
+								Window_OK Item_607905 >= 2
+									EndWindow 8290009
+									EndBlock
+
+								Window_OK Item_607905 == 1
+									AddStampCount 607905,+1
+									EndBlock
+
+								Window_OK
+									EndWindow 8290010
+									EndBlock
+
+						Window_NO
+							Window 8290011,OK
+
+								Window_OK ItemSpace >= 1 && Item_607905 >= 1
+									KillItemAll 607905
+									GiveItemEX 15200,1,"\n\n　소지품이 가득 차서 드릴 수가 없습니다.\n　정리해주십시오."
+									EndBlock
+
+								Window_OK Item_607905 >= 1
+									EndWindow 8290012
+									EndBlock
+
+								Window_OK
+									EndWindow 8290013
+									EndBlock
+
+
+				else
+					Window 8290014,YES,NO
+
+						Window_YES
+							Window 8290015,OK
+
+								Window_OK Item_607905 >= 1
+									KillItemAll 607905
+									EndBlock
+
+								Window_OK
+									EndBlock
+
+						Window_NO
+							EndWindow 8290016
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+#　엔트리 증 소지하지 않음 
+block JobAncestry == 470
+
+	EndWindow 8290017
+
+
+
+###　광부가 아니다
+block
+	EndWindow 8290018
+
+
+
+

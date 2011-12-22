@@ -1,0 +1,8 @@
+block
+
+window "\n\n欢迎您来到珊瑚小镇 \n要我带路吗？",yes,no
+	window_no
+	window_yes
+		Leavegroup
+		warp 0,5000,55,74
+

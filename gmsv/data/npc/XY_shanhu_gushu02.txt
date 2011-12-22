@@ -1,0 +1,6 @@
+block
+window "\n\n不愧是『开启者』啊\n不简单，已经通过试炼了。\n你有能力配的上这个称号，让我期待你有更好的表现吧。。。 ",ok
+window_ok
+		Leavegroup
+		EndEvent 90 = 1
+		Warp 0,33232,6,13

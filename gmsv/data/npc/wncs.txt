@@ -1,0 +1,199 @@
+#万能传送NPC脚本
+#
+#如果需要扣费,请调用对话文件800054-800056
+#就是取消调用800060对话,修改成800054-800056~~根据需求设定扣费金额!!
+#如:	window 800060,YES,NO
+#	修改成
+#	window 800064,YES,NO
+#	addgold -100随对话框内金额变化!~
+#	感谢您使用万能传送脚本~~~	Thank You!
+#	QQ:7359610
+##########↓其他说明##########
+#判断金钱及扣费
+#	window_yes gold < 100
+#	window 800062,OK
+#	window_yes
+#	addgold -100
+#判断当前时间
+#	window_yes nowtime != 1
+#	EndWindow 800058,OK
+#判断等级
+#	Window_YES Level < 32
+#	EndWindow 800057
+
+
+
+
+
+
+#A 阿凯鲁法村
+block	StrCmpChat == 800063 || StrCmpChat == 800089
+	window 800060,YES,NO
+
+#判断金钱及扣费
+#	window_yes gold < 100
+#	window 800062,OK
+#	window_yes
+#	addgold -100
+
+	window_yes
+	leavegroup
+	Warp 0,33200,99,165
+#点否后的对话
+#	window_NO
+#	window 800062,OK
+
+#B风洞
+block	StrCmpChat == 800064 || StrCmpChat == 800090
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,59670,176,133
+#C火山
+block	StrCmpChat == 800065 || StrCmpChat == 800091
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,48000,25,27
+#D蒂娜村
+block	StrCmpChat == 800066 || StrCmpChat == 800092
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,4299,5,5
+#E乌克兰
+block	StrCmpChat == 800067 || StrCmpChat == 800093
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,100,348,379
+#F法兰城
+block	StrCmpChat == 800068 || StrCmpChat == 800094
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,1000,233,78
+#G哥拉尔城
+block	StrCmpChat == 800069 || StrCmpChat == 800095
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,43100,120,107
+#H哈贝鲁村
+block	StrCmpChat == 800070 || StrCmpChat == 800096
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,3100,68,35
+#I UD
+block	StrCmpChat == 800071 || StrCmpChat == 800097
+	window 800060,YES,NO
+	window_yes	
+	leavegroup
+	Warp 0,24001,10,10
+#J加纳村
+block	StrCmpChat == 800072 || StrCmpChat == 800098
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,3099,14,7
+#K坎那贝拉村
+block	StrCmpChat == 800073 || StrCmpChat == 800099
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,33500,22,28
+#L里谢里雅堡
+block	StrCmpChat == 800074 || StrCmpChat == 800100
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,1500,41,76
+#M魔法大学
+block	StrCmpChat == 800075 || StrCmpChat == 800101
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,4400,106,54
+#N鲁米那斯
+block	StrCmpChat == 800076 || StrCmpChat == 800102
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,43600,65,27
+#O米诺基亚
+block	StrCmpChat == 800077 || StrCmpChat == 800103
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,43500,22,84
+#P雷克塔尔
+block	StrCmpChat == 800078 || StrCmpChat == 800104
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,43700,59,43
+#Q奇利村
+block	StrCmpChat == 800079 || StrCmpChat == 800105
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,3299,13,9
+#R雪山
+block	StrCmpChat == 800080 || StrCmpChat == 800106
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,402,83,193
+#S圣拉鲁卡村
+block	StrCmpChat == 800081 || StrCmpChat == 800107
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,2399,15,4
+#T天空之城
+block	StrCmpChat == 800082 || StrCmpChat == 800108
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,59519,26,15
+#U艾尔莎
+block	StrCmpChat == 800083 || StrCmpChat == 800109
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,59520,140,105
+#V亚留特村
+block	StrCmpChat == 800084 || StrCmpChat == 800110
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,2499,5,15
+#W维诺亚村
+block	StrCmpChat == 800085 || StrCmpChat == 800111
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,2199,5,5
+#X杰诺瓦村
+block	StrCmpChat == 800086 || StrCmpChat == 800112
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,4099,6,7
+#Y伊尔村
+block	StrCmpChat == 800087 || StrCmpChat == 800113
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,2099,20,10
+#Z阿巴尼斯村
+block	StrCmpChat == 800088 || StrCmpChat == 800114
+	window 800060,YES,NO
+	window_yes
+	leavegroup
+	Warp 0,4399,5,14
+#Npc对话框
+block	group >=1
+	window 800061,OK
+	window_OK

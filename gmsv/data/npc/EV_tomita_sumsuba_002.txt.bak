@@ -1,0 +1,76 @@
+#　수확제 던젼（구 여름방학 던젼：서브Ａ）　　ｂｙ　토미타
+#
+#　　　생구이집의 권
+
+###　바위 도마뱀의 반 생구이를 소지
+
+block Item_607932 >= 1
+	EndWindow 8460001
+
+
+
+###　바위 도마뱀을 소지
+
+block Item_607931 >= 1
+	Window 8460002,OK
+
+		Window_OK Item_607931 >= 1 && ItemSpace >= 1
+			KillItemAll 607931
+			GiveItemEX 607932,1,"\n\n　우후후, 줄 수 없군.\n　우후후, 소지품이 가득 찼어."
+
+		Window_OK ItemSpace >= 1
+			EndWindow 8460003
+
+		Window_OK
+			EndWindow 8460004
+
+
+
+###　덤불 곤약을 소지
+
+block Item_607934 >= 1
+	Window 8460005,OK
+
+		Window_OK
+			KillItemAll 607934
+
+
+
+###　쉰 두부를 소지
+
+block Item_607933 >= 1
+	Window 8460006,YES,NO
+
+		Window_YES Item_607933 >=1 && ItemSpace >= 1
+			Window 8460007,OK
+
+				Window_OK Item_607933 >= 1 && ItemSpace >= 1
+					KillItemAll 607933
+					GiveItemEX 607934,1,"\n\n　우후후, 줄 수 없군.\n　우후후, 소지품이 가득 찼어."
+
+				Window_OK ItemSpace >= 1
+					EndWindow 8460008
+
+				Window_OK
+					EndWindow 8460009
+
+		Window_YES ItemSpace >= 1
+			EndWindow 8460010
+
+		Window_YES
+			EndWindow 8460011
+
+		Window_NO
+			EndWindow 8460012
+
+
+
+###　상기 아이템을 소지하지 않음
+
+block
+	EndWindow 8460013
+
+
+
+
+

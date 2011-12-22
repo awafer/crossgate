@@ -1,0 +1,8 @@
+block
+window "\n　　　　　百人道场开放啦 \n\n　　本道场总共设有200多个BOSS，分成100组，10层为一组。打赢各种每一组都能拿到一张相应的道场卷道场卷可以来换奖品,层数越高，奖品越丰厚哦。",next
+window "\n\n　有道场卷还也可以选择不拿奖品挑战更高的难道，所以你要想好是拿奖品还是继续挑战哦。",next
+window "\n\n　好啦，@n　你考虑好要挑战了吗？",yes,no
+window_yes
+LeaveGroup
+warp 0,60001,5,10
+window_no

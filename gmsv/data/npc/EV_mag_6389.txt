@@ -1,0 +1,29 @@
+#아스테리아 신관（알제스의 자비）
+
+##############  ##############
+block Item 18495 == 1
+#\n\n　계제는 끝난 것 같군요. 그럼 오시지요.
+	Window 14746,OK
+	Window_OK
+	KillItem 18495
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24001,7,8
+
+##############  ##############
+block  Item 18499 == 1
+#\n\n　계제는 끝난 것 같군요. 그럼 오시지요.
+	Window 14746,OK
+	Window_OK
+	KillItem 18499
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24001,7,8
+
+##############  ##############
+block
+#\n\n　계제의 증표는 어떻게 하셨습니까?
+	EndWindow 14747,OK
+
+
+

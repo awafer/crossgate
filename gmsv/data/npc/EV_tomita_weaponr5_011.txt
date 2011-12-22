@@ -1,0 +1,43 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　겐세키의 권
+
+###　검직인이고 검작성 스킬레벨이 ５이상
+block JobAncestry == 200 && SkillLevel_200 >= 5
+	Window 8770001,OK
+
+		Window_OK
+			GiveRecipe 24
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　검직인이지만 검작성 스킬레벨이 ５미만
+block JobAncestry == 200
+	Window 8770002,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+
+###　검직인이 아니다
+block
+	Window 8770003,YES,NO
+		Window_YES
+			Window 8770004,OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow 8770005
+
+
+
+
+

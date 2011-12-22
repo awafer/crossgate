@@ -1,0 +1,5 @@
+block item 795012 == 0
+giveitem 795012
+endwindow "\n\n　这是第7组奖品兑换卷，如果你没有完成81-90的挑战可以带着这个回去领取补偿奖品，挑战成功了用这个换取当前组合的道场卷，别扔掉哦，不然你拿不到道场卷的。",ok
+block 
+endwindow "\n\n　A　ZA　A　ZA　FIGHTING！！"

@@ -1,0 +1,5 @@
+block item 795011 == 0
+giveitem 795011
+endwindow "\n\n　这是第6组奖品兑换卷，如果你没有完成71-80的挑战可以带着这个回去领取补偿奖品，挑战成功了用这个换取当前组合的道场卷，别扔掉哦，不然你拿不到道场卷的。",ok
+block 
+endwindow "\n\n　A　ZA　A　ZA　FIGHTING！！"

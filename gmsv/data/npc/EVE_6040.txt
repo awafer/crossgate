@@ -1,0 +1,22 @@
+#ＮＰＣ：동의 열쇠 판매인
+#장소：바 안키모에 있음
+block
+
+StrCmpChat != 777782
+##########  ##########
+             Window 777780,OK
+             Window_OK	
+             EndWindow 777780
+block StrCmpChat == 777782
+##########  ##########
+##########  ##########
+                Window 777783,OK
+		Window_OK gold < 50000
+			Endwindow 777784
+		Window_OK ItemSpace == 0
+			Endwindow 777785
+		Window_OK ItemSpace >= 1
+			AddGold -50000
+			GivePet (314%10,331%10,321%10,801%10,201%10,202%10,241%10,401%10,501%10,601%10)
+			Endwindow 777779
+

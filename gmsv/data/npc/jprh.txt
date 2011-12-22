@@ -1,0 +1,10 @@
+#奖品兑换员脚本 V1.0
+#作者：vampire 
+#2008.01.21
+
+block
+	window "\n\n@c　目前没有任何活动可兑换奖品。\n\n@c\n\n@c\n\n　　　　　　本整合服务端由Vampire提供 \n@c　　　如有任何问题请访问www.mocwww.com",yes,no
+	Window_NO
+	EndWindow "\n\n@c 欢迎下次惠顾!"
+	window_yes
+	EndWindow "\n\n@c 你身上没有可兑换的道具!"

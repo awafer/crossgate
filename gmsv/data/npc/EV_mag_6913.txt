@@ -1,0 +1,500 @@
+#
+#쥬제페 할아버지
+#
+#############　R가름　###############
+block Item 17747 >= 1 && Item 17748 >= 1 && Item 17749 >= 1 && Item 17750 >= 1 && petlevel 34 == 1
+#\n\n　재미있는 소재가 모아져 있군~~\n나한테 맡겨주면 가름을 개조해 줄텐데 어떤가?
+	Window 206694,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 17747 >= 1 && Item 17748 >= 1 && Item 17749 >= 1 && Item 17750 >= 1 && petlevel 34 == 1
+	KillItem 17747,1
+	KillItem 17748,1
+	KillItem 17749,1
+	KillItem 17750,1
+	KillPetl 34,1
+	GivePet 2032
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+############## R슬라임 ##############
+block Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+#\n\n　흠흠, 이만큼 모였으면 슬라임을 개조할 수 있겠군. 해보겠나?
+	Window 15752,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18918 >= 1 && Item 18919 >= 1 && Item 18920 >= 1 && petlevel 501 == 1
+	KillItem 18918,1
+	KillItem 18919,1
+	KillItem 18920,1
+	KillPetl 501,1
+	GivePet 2027
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+############## R리저드 맨 ##############
+block Item 18921 >= 1 && Item 18922 >= 1 && Item 18923 >= 1 && Item 18924 >= 1  && petlevel 701 == 1
+#\n\n　흠흠, 이만큼 모였으면 리저드 맨을 개조할 수 있겠군. 해보겠나?
+	Window 15753,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18921 >= 1 && Item 18922 >= 1 && Item 18923 >= 1 && Item 18924 >= 1  && petlevel 701 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18921 >= 1 && Item 18922 >= 1 && Item 18923 >= 1 && Item 18924 >= 1  && petlevel 701 == 1
+	KillItem 18921,1
+	KillItem 18922,1
+	KillItem 18923,1
+	KillItem 18924,1
+	KillPetl 701,1
+	GivePet 2028
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+############## R피그미 배트 ##############
+block Item 18925 >= 1 && Item 18926 >= 1 && Item 18927 >= 1 && Item 18928 >= 1 && Item 18929 >= 1 && petlevel 243 == 1
+#\n\n　흠흠, 이만큼 모였으면 피그미 배트를 개조할 수 있겠군. 해보겠나?
+	Window 15754,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18925 >= 1 && Item 18926 >= 1 && Item 18927 >= 1 && Item 18928 >= 1 && Item 18929 >= 1 && petlevel 243 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18925 >= 1 && Item 18926 >= 1 && Item 18927 >= 1 && Item 18928 >= 1 && Item 18929 >= 1 && petlevel 243 == 1
+	KillItem 18925,1
+	KillItem 18926,1
+	KillItem 18927,1
+	KillItem 18928,1
+	KillItem 18929,1
+	KillPetl 243,1
+	GivePet 2029
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+############## R디그 고블린 ##############
+block Item 18934 >= 1 && Item 18935 >= 1 && Item 18936 >= 1 && Item 18937 >= 1 && Item 18938 >= 1 && petlevel 804 == 1
+
+#\n\n　흠흠, 이만큼 모였으면 디그 고블린을 개조할 수 있겠군. 해보겠나?
+	Window 15755,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18934 >= 1 && Item 18935 >= 1 && Item 18936 >= 1 && Item 18937 >= 1 && Item 18938 >= 1 && petlevel 804 == 1
+
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18934 >= 1 && Item 18935 >= 1 && Item 18936 >= 1 && Item 18937 >= 1 && Item 18938 >= 1 && petlevel 804 == 1
+
+	KillItem 18934,1
+	KillItem 18935,1
+	KillItem 18936,1
+	KillItem 18937,1
+	KillItem 18938,1
+	KillPetl 804,1
+	GivePet 2030
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+############## 모노아이RR ##############
+block Item 18939 >= 1 && Item 18940 >= 1 && Item 18941 >= 1 && Item 18942 >= 1 && Item 18943 >= 1 && petlevel 2050 == 1 && Item 18631 >= 1
+
+#\n\n　흠흠, 그런가! 타피오키아인가! 이거라면 R모노아이를 개조할 수 있겠군. 해보겠나?
+	Window 15756,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18939 >= 1 && Item 18940 >= 1 && Item 18941 >= 1 && Item 18942 >= 1 && Item 18943 >= 1 && petlevel 2050 == 1 && Item 18631 >= 1
+
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18939 >= 1 && Item 18940 >= 1 && Item 18941 >= 1 && Item 18942 >= 1 && Item 18943 >= 1 && petlevel 2050 == 1 && Item 18631 >= 1
+
+	KillItem 18939,1
+	KillItem 18940,1
+	KillItem 18941,1
+	KillItem 18942,1
+	KillItem 18943,1
+	Killitem 18631,1
+	KillPetl 2050,1
+	GivePet 2031
+
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18641 >= 1 && Item 18642 >= 1 && Item 18643 >= 1 && petlevel 101 == 1
+#\n\n　흠흠, 이만큼 모였으면 좀비를 개조할 수 있겠군. 해보겠나?
+	Window 15412,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18641 >= 1 && Item 18642 >= 1 && Item 18643 >= 1 && petlevel 101 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18641 >= 1 && Item 18642 >= 1 && Item 18643 >= 1 && petlevel 101 == 1
+	KillItem 18641,1
+	KillItem 18642,1
+	KillItem 18643,1
+	KillPetl 101,1
+	GivePet 2019
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18644 >= 1 && Item 18645 >= 1 && Item 18646 >= 1 && Item 18647 >= 1 && petlevel 332 == 1
+#\n\n　흠흠, 이만큼 모였으면 모노아이를 개조할 수 있겠군. 해보겠나?
+	Window 15413,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18644 >= 1 && Item 18645 >= 1 && Item 18646 >= 1 && Item 18647 >= 1 && petlevel 332 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18644 >= 1 && Item 18645 >= 1 && Item 18646 >= 1 && petlevel 332 == 1
+	KillItem 18644,1
+	KillItem 18645,1
+	KillItem 18646,1
+	KillItem 18647,1
+	KillPetl 332,1
+	GivePet 2020
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18648 >= 1 && Item 18649 >= 1 && Item 18650 >= 1 && Item 18651 >= 1 && Item 18652 >= 1 && petlevel 421 == 1
+#\n\n　흠흠, 이만큼 모였으면 몰볼을 개조할 수 있겠군. 해보겠나?
+	Window 15414,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18648 >= 1 && Item 18649 >= 1 && Item 18650 >= 1 && Item 18651 >= 1 && Item 18652 >= 1 && petlevel 421 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18648 >= 1 && Item 18649 >= 1 && Item 18650 >= 1 && Item 18651 >= 1 && Item 18652 >= 1 && petlevel 421 == 1
+	KillItem 18648,1
+	KillItem 18649,1
+	KillItem 18650,1
+	KillItem 18651,1
+	KillItem 18652,1
+	KillPetl 421,1
+	GivePet 2021
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18653 >= 1 && Item 18654 >= 1 && Item 18655 >= 1 && Item 18656 >= 1 && Item 18657 >= 1 && petlevel 612 >= 1
+#\n\n　흠흠, 이만큼 모였으면 래빗 미믹을 개조할 수 있겠군. 해보겠나?
+	Window 15415,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18653 >= 1 && Item 18654 >= 1 && Item 18655 >= 1 && Item 18656 >= 1 && Item 18657 >= 1 && petlevel 612 >= 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18653 >= 1 && Item 18654 >= 1 && Item 18655 >= 1 && Item 18656 >= 1 && Item 18657 >= 1 && petlevel 612 >= 1
+	KillItem 18653,1
+	KillItem 18654,1
+	KillItem 18655,1
+	KillItem 18656,1
+	KillItem 18657,1
+	KillPeth 612,1
+	GivePet 2022
+#\n\n　어라!? 어찌된 건가, 나답지 않게 조금 잘못해 버렸군! 와하하, 그렇게 눈꼬리 올리지 말게. 성급하면 손해를 본다구.。
+	EndWindow 14058,OK
+
+##############  ##############
+block Item 18602 >= 1 && Item 18603 >= 1 && Item 18604 >= 1 && petlevel 21 == 1
+#\n\n　흠흠, 이만큼 모였으면 노커를 개조할 수 있겠군. 해보겠나?
+	Window 15380,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18602 >= 1 && Item 18603 >= 1 && Item 18604 >= 1 && petlevel 21 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18602 >= 1 && Item 18603 >= 1 && Item 18604 >= 1 && petlevel 21 == 1
+	KillItem 18602,1
+	KillItem 18603,1
+	KillItem 18604,1
+	KillPetl 21,1
+	GivePet 2013
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18605 >= 1 && Item 18606 >= 1 && Item 18607 >= 1 && petlevel 23 == 1
+#\n\n　흠흠, 이만큼 모였으면 페이크랫을 개조할 수 있겠군. 해보겠나?
+	Window 15381,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18605 >= 1 && Item 18606 >= 1 && Item 18607 >= 1 && petlevel 23 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18605 >= 1 && Item 18606 >= 1 && Item 18607 >= 1 && petlevel 23 == 1
+	KillItem 18605,1
+	KillItem 18606,1
+	KillItem 18607,1
+	KillPetl 23,1
+	GivePet 2014
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18608 >= 1 && Item 18609 >= 1 && Item 18610 >= 1 && Item 18611 >= 1 && petlevel 831 == 1
+#\n\n　흠흠, 이만큼 모였으면 하피를 개조할 수 있겠군. 해보겠나?
+	Window 15382,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18608 >= 1 && Item 18609 >= 1 && Item 18610 >= 1 && Item 18611 >= 1 && petlevel 831 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18608 >= 1 && Item 18609 >= 1 && Item 18610 >= 1 && Item 18611 >= 1 && petlevel 831 == 1
+	KillItem 18608,1
+	KillItem 18609,1
+	KillItem 18610,1
+	KillItem 18611,1
+	KillPetl 831,1
+	GivePet 2015
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18612 >= 1 && Item 18613 >= 1 && Item 18614 >= 1 && Item 18615 >= 1 && petlevel 712 == 1
+#\n\n　흠흠, 이만큼 모였으면 와이암을 개조할 수 있겠군. 해보겠나?
+	Window 15383,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18612 >= 1 && Item 18613 >= 1 && Item 18614 >= 1 && Item 18615 >= 1 && petlevel 712 == 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18612 >= 1 && Item 18613 >= 1 && Item 18614 >= 1 && Item 18615 >= 1 && petlevel 712 == 1
+	KillItem 18612,1
+	KillItem 18613,1
+	KillItem 18614,1
+	KillItem 18615,1
+	KillPetl 712,1
+	GivePet 2016
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+##############  ##############
+block Item 18616 >= 1 && Item 18617 >= 1 && Item 18618 >= 1 && Item 18619 >= 1 && Item 18620 >= 1 && petlevel 616 >= 1
+#\n\n　흠흠, 이만큼 모였으면 퓨어 미믹을 개조할 수 있겠군. 해보겠나?
+	Window 15384,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18616 >= 1 && Item 18617 >= 1 && Item 18618 >= 1 && Item 18619 >= 1 && Item 18620 >= 1 && petlevel 616 >= 1
+#\n\n　그런가 그런가! 헌데, 개조한 수마는 스킬을 전부 잊어버리는데 그래도 괜찮은가?
+	Window 15407,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18616 >= 1 && Item 18617 >= 1 && Item 18618 >= 1 && Item 18619 >= 1 && Item 18620 >= 1 && petlevel 616 >= 1
+	KillItem 18616,1
+	KillItem 18617,1
+	KillItem 18618,1
+	KillItem 18619,1
+	KillItem 18620,1
+	KillPeth 616,1
+	GivePet 2017
+#\n\n　어라!? 어찌된 건가, 나답지 않게 조금 잘못해 버렸군! 와하하, 그렇게 눈꼬리 올리지 말게. 성급하면 손해를 본다구.
+	EndWindow 15387,OK
+
+##############  ##############
+block Item 18621 >= 1 && Item 18622 >= 1 && Item 18623 >= 1 && Item 18624 >= 1 && Item 18625 >= 1 && Item 14950 >= 1 && Item 14951 >= 1 && Item 14952 >= 1 && Item 14953 >= 1 && petspace == 0
+#\n\n　흠흠, 이만큼 모였으면 밴드레로를 만들 수 있을 것 같은데, 자네는 더 이상 수마를 가질 수 없을 것 같군.
+	EndWindow 15406,OK
+
+##############  ##############
+block Item 18621 >= 1 && Item 18622 >= 1 && Item 18623 >= 1 && Item 18624 >= 1 && Item 18625 >= 1 && Item 14950 >= 1 && Item 14951 >= 1 && Item 14952 >= 1 && Item 14953 >= 1 && petspace != 0
+#\n\n　흠흠, 이만큼 모였으면 밴드레로를 만들 수 있겠군. 해보겠나?
+	Window 15385,YES,NO
+	Window_NO
+#\n\n　그런가 그런가, 마음이 내키면 다시 오도록 해.
+	EndWindow 15388,OK
+	Window_YES Item 18621 >= 1 && Item 18622 >= 1 && Item 18623 >= 1 && Item 18624 >= 1 && Item 18625 >= 1 && Item 14950 >= 1 && Item 14951 >= 1 && Item 14952 >= 1 && Item 14953 >= 1 && petspace != 0
+	KillItem 18621,1
+	KillItem 18622,1
+	KillItem 18623,1
+	KillItem 18624,1
+	KillItem 18625,1
+	KillItem 14950,1
+	KillItem 14951,1
+	KillItem 14952,1
+	KillItem 14953,1
+	GivePet 2018
+#\n\n　어떤가 어떤가. 내가 손대면 간단하지.
+	EndWindow 15386,OK
+
+#############　R가름 관계　###############
+#block Item 17747 >= 1 || Item 17748 >= 1 || Item 17749 >= 1 || Item 17750 >= 1
+
+#오오~~!! 자네 천연의 좋은 소재를 가지고 있군~\n그런 소재가 ４개만 있으면 Ｒ가름이 가능할지도 모르겠군~
+
+#	EndWindow 206693,OK
+
+##############  ##############
+block Item 18918 >= 1 || Item 18919 >= 1 || Item 18920 >= 1
+#\n\n　호오호오, 내가 모르는 개조설계도를 가지고 있는 것 같군. 어디 보자, 이건 아무래도 슬라임의 개조설계도 같군. 흠흠, 아무래도 이 설계도는 전부 해서 ３종류 있는 것 같군. 그것과 슬라임 LV1을 데리고 오면 개조해주지.
+	EndWindow 15757,OK
+
+##############  ##############
+block Item 18921 >= 1 || Item 18922 >= 1 || Item 18923 >= 1 || Item 18924 >= 1
+
+#\n\n　호오호오, 내가 모르는 개조설계도를 가지고 있는 것 같군. 어디 보자, 이건 아무래도 리저드 맨의 개조설계도 같군. 흠흠, 아무래도 이 설계도는 전부 해서 ４종류 있는 것 같군. 그것과 리저드 맨 LV1을 데리고 오면 개조해주지.
+
+	EndWindow 15758,OK
+
+##############  ##############
+block Item 18925 >= 1 || Item 18926 >= 1 || Item 18927 >= 1 || Item 18928 >= 1 || Item 18929 >= 1
+
+#\n\n　호오호오, 내가 모르는 개조설계도를 가지고 있는 것 같군. 어디 보자, 이건 아무래도 피그미 배트의 개조설계도 같군. 흠흠, 아무래도 이 설계도는 전부 해서 ５종류 있는 것 같군. 그것과 피그미 배트 LV1을 데리고 오면 개조해주지.
+
+	EndWindow 15759,OK
+
+##############  ##############
+block Item 18934 >= 1 || Item 18935 >= 1 || Item 18936 >= 1 || Item 18937 >= 1 || Item 18938 >= 1
+
+#\n\n　호오호오, 내가 모르는 개조설계도를 가지고 있는 것 같군. 어디 보자, 이건 아무래도 디그 고블린의 개조설계도 같군. 흠흠, 아무래도 이 설계도는 전부 해서 ５종류 있는 것 같군. 그것과 디그 고블린 LV1을 데리고 오면 개조해주지.
+
+	EndWindow 15760,OK
+
+##############  ##############
+block Item 18939 >= 1 || Item 18940 >= 1 || Item 18941 >= 1 || Item 18942 >= 1 || Item 18943 >= 1
+
+#\n\n　호오호오, 내가 모르는 개조설계도를 가지고 있는 것 같군. 어디 보자, 이것은…이런! 내가 만든 R모노아이의 개조설계도 같은 모양이잖아. 개조 위에 개조라니……흠흠, 아무래도 이 설계도는 전부 해서 ５종류 있는 것 같군. 그것과 R모노아이 LV1을 데리고…그것과……
+
+#으음. 중요한 부분이 잘 안 보이는군. 뭔가 아이템이 필요한 것 같아. 대개의 개조설계도라면 보는 것만으로 금방 이해할 수 있는데, 개조 위에 개조라면…이건 아무리 나라도…. 갑자기 변이적인 힘이 필요한 것 같지만 키 아이템이 뭔지 모르겠군. 뭔가 변이를 일으킬만한 소재인 듯 한데…
+
+
+	Window 15761,NEXT
+	EndWindow 15762,OK
+
+
+
+
+
+
+
+
+#############  ##############
+block Item 18641 >= 1 || Item 18642 >= 1 || Item 18643 >= 1
+#\n\n　호오호오, 좀비의 개조설계도를 가지고 있는 것 같군. 랄까, 캔디 녀석, 내 비장의 설계도 제2탄에까지 손을 댔군. 어쩔 수 없는 녀석이야! 좀비의 개조설계도는 전부 해서 3종류 있다. 그것과 좀비 LV1을 데리고 오면 개조해주지.
+
+	EndWindow 15408,OK
+
+##############  ##############
+block Item 18644 >= 1 || Item 18645 >= 1 || Item 18646 >= 1 || Item 18647 >= 1
+#\n\n　호오호오, 모노아이의 개조설계도를 가지고 있는 것 같군. 랄까, 캔디 녀석, 내 비장의 설계도제2탄에까지 손을 댔군. 어쩔 수 없는 녀석이야! 모노아이의 개조설계도는 전부 해서 4종류 있다. 그것과 모노아이 LV1을 데리고 오면 개조해주지.
+	EndWindow 15409,OK
+
+##############  ##############
+block Item 18648 >= 1 || Item 18649 >= 1 || Item 18650 >= 1 || Item 18651 >= 1 || Item 18652 >= 1
+#\n\n　호오호오, 몰볼의 개조설계도를 가지고 있는 것 같군. 랄까, 캔디 녀석, 내 비장의 설계도 제2탄에까지 손을 댔군. 어쩔 수 없는 녀석이야! 몰볼의 개조설계도는 전부 해서 5종류 있다. 그것과 몰볼 LV1을 데리고 오면 개조해주지.
+	EndWindow 15410,OK
+
+##############  ##############
+block Item 18653 >= 1 || Item 18654 >= 1 || Item 18655 >= 1 || Item 18656 >= 1 || Item 18657 >= 1
+#\n\n　호오호오, 래빗 미믹의 개조설계도를 가지고 있는 것 같군. 랄까, 캔디 녀석, 내 비장의 설계도 제2탄에까지 손을 댔군. 어쩔 수 없는 녀석이야! 래빗 미믹의 개조설계도는 전부 해서 5종류 있다. 그것과 래빗 미믹을 데리고 오면 개조해주지.
+	EndWindow 15411,OK
+
+#############  ##############
+block Item 18602 >= 1 || Item 18603 >= 1 || Item 18604 >= 1
+#\n\n　호오호오, 노커의 개조설계도를 가지고 있는 것 같군. 노커의 개조설계도는 전부 해서 3종류 있다. 그것과 노커 LV1을 데리고 오면 개조해주지.
+	EndWindow 15374,OK
+
+##############  ##############
+block Item 18605 >= 1 || Item 18606 >= 1 || Item 18607 >= 1
+#\n\n　호오호오, 페이크랫의 개조설계도를 가지고 있는 것 같군. 페이크랫의 개조설계도는 전부 해서 3종류 있다. 그것과 페이크랫 LV1을 데리고 오면 개조해주지.
+	EndWindow 15375,OK
+
+##############  ##############
+block Item 18608 >= 1 || Item 18609 >= 1 || Item 18610 >= 1 || Item 18611 >= 1
+#\n\n　호오호오, 하피의 개조설계도를 가지고 있는 것 같군. 하피의 개조설계도는 전부 해서 4종류 있다. 그것과 하피 LV1을 데리고 오면 개조해주지.
+	EndWindow 15376,OK
+
+##############  ##############
+block Item 18612 >= 1 || Item 18613 >= 1 || Item 18614 >= 1 || Item 18615 >= 1
+#\n\n　호오호오, 와이암의 개조설계도를 가지고 있는 것 같군. 와이암의 개조설계도는 전부 해서 4종류있다. 그것과 와이암 LV1을 데리고 오면 개조해주지.
+	EndWindow 15377,OK
+
+##############  ##############
+block Item 18616 >= 1 || Item 18617 >= 1 || Item 18618 >= 1 || Item 18619 >= 1 || Item 18620 >= 1
+#\n\n　호오호오, 퓨어 미믹의 개조설계도를 가지고 있는 것 같군. 퓨어 미믹의 개조설계도는 전부 해서 5종류 있다. 그것과 퓨어 미믹을 데리고 오면 개조해주지.
+	EndWindow 15378,OK
+
+##############  ##############
+block Item 18621 >= 1 || Item 18622 >= 1 || Item 18623 >= 1 || Item 18624 >= 1 || Item 18625 >= 1
+#\n\n　호오호오, 기계장치 밴드레로의 설계도를 가지고 있는 것 같군. 밴드레로의 설계도는 전부 해서 5종류있다. 그것과 밴드레로, 밴디트, 파이어리트, 크래셔의 카드를 가지고 오면 만들어주지.
+	EndWindow 15379,OK
+
+##############  ##############
+block
+#\n\n　나는 기계장치직인인 쥬제페라는 사람이야. 이 파렌 왕국에는 수마를 여러 가지로 손보는 녀석들이 있다고 듣고 먼 동쪽에서 실력을 겨루기 위해 왔지. 하지만 알바 뭐라고 하는 녀석은 모습을 잘 드러내지 않는 것 같아서 말이야. 이래선 겨루어볼 수도 없어.
+	Window 15370,NEXT
+#\n\n　뭐, 문제는 그것만이 아니지만……실은 함께 이 나라로 건너온 내 손녀딸 캔디가, 내 비장의 설계도를 가지고 어디론가 가버렸다네……자네, 괜찮다면 손녀딸을 찾아주지 않겠나.
+	Window 15371,YES,NO
+	Window_NO
+#\n\n　으음, 곤란하군.
+	EndWindow 15372,OK
+	Window_YES
+#\n\n　그런가 그런가, 그거 고맙구만. 손녀의 이름은 「캔디」이지만, 이름만큼 만만한 애가 아니니 조심하도록 하게. 그리고 캔디가 가지고 있는 설계도를 손에 넣으면 나에게 돌려주지 않겠나. 보답으로 당신의 수마를 개조해주지. 와하하하하.
+	EndWindow 15373,OK
+
+

@@ -1,0 +1,14 @@
+block item 795004 == 0
+		window "\n\n　恭喜您取得了第四组的胜利。\n　请收好您的道场卷。",ok
+	window_ok itemspace >=1
+		LeaveGroup
+		giveitem 795004
+		warp 0,1000,230,80
+
+	window_ok itemspace == 0
+		window "\n\n　您的东西太多了。",ok
+block item 795004 >= 1
+		window "\n\n　你已经有本组的道场卷了，我不能再给你了哦。\n\n　用掉后再拿吧　：）",ok
+	window_ok
+		LeaveGroup
+		warp 0,1000,230,80

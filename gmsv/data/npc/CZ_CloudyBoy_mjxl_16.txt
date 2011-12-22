@@ -1,0 +1,17 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Level >= 70 && Item 940112 == 1 && Item 940122 == 1
+
+	KillItem 940112,1
+	KillItem 940122,1
+	GiveItem 940113,1
+	GiveItem 940123,1
+	EndWindow "\n\n\n@c　哈哈。不错。后生可畏！打的赢我的化身！有成为冥神的资格了！去吧！后辈~"
+
+
+block Item 940112 == 1
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

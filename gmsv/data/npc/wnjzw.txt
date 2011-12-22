@@ -1,0 +1,5 @@
+#万能就职屋传送
+#作者：vmpire
+#时间：2008.01.04
+block StrCmpChat == R
+warp 0,882,20,17

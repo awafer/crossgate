@@ -1,0 +1,28 @@
+#여행 상인 쟝 홀리　14015,4:1154의 어딘가
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+########## 메시지 윈도우를 연다 ##########
+block StrCmpChat == R
+
+	#\n\n　어서 오이소. 오늘도 좋은 물건 들여왔심더.\n　오늘 상품은 『ㅅ자 수리검』이라예. 지금이라면 특별가격  『１５０Ｇ』 인데 어떤교? 안살랍니꺼?
+	Window 12102,YES,NO
+
+	Window_YES Gold >= 150 && ItemSpace >= 1
+	Addgold -150
+	GiveLeak1Item 2901,1
+	#\n\n　잘 쓰이소~\n　그라믄 또 보입시더.
+	EndWindow 12103
+
+	Window_YES Gold < 150
+	#\n\n　돈이 모질라네예.\n　돈 모아서 또 오이소~
+	EndWindow 12104
+
+	Window_YES ItemSpace == 0
+	#\n\n　물건이 꽉 차 있네예.\n　짐을 덜어놓고 또 오이소~
+	EndWindow 12117
+
+	Window_NO
+	#\n\n　또 좋은 물건 들여올 테니까, 기대해 주이소
+	EndWindow 12105
+

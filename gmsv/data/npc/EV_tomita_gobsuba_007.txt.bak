@@ -1,0 +1,90 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　선물가게（고블린 조끼）의 권
+
+###　고블린 조끼를 소지
+block Item_607910 >= 1
+	EndWindow 6380001
+
+
+
+###　조끼 이외의 선물을 소지
+block Item_607908 >= 1 || Item_607909 >= 1 || Item_607911 >= 1 || Item_607912 >= 1 || Item_607913 >= 1
+	EndWindow 6380002
+
+
+
+###　소령의 뿔을 １개 소지
+block Item_607925 >= 1
+	Window 6380003,YES,NO
+
+		Window_YES
+			Window 6380004,OK
+
+				Window_OK Item_607925 >= 1 && ItemSpace >= 1
+					KillItem 607925,1
+					GiveItemEX 607910,1,"\n\n　안돼에, 소지품이 가득 찼잖아.\n　정리하라구!!　에헤헤……."
+
+				Window_OK Item_607925 >= 1
+					EndWindow 6380005
+
+				Window_OK
+					EndWindow 6380006
+
+		Window_NO
+			EndWindow 6380007
+
+
+
+###　중사 실드를 ３개 소지
+block Item_607923 >= 3
+	Window 6380008,YES,NO
+
+		Window_YES
+			Window 6380009,OK
+
+				Window_OK Item_607923 >= 3 && ItemSpace >= 1
+					KillItem 607923,3
+					GiveItemEX 607910,1,"\n\n　안돼에, 소지품이 가득 찼잖아.\n　정리하라구!!　에헤헤……."
+
+				Window_OK Item_607923 >= 3
+					EndWindow 6380010
+
+				Window_OK
+					EndWindow 6380011
+
+		Window_NO
+			EndWindow 6380012
+
+
+
+###　하사 바주카를 ５개 소지
+block Item_607924 >= 5
+	Window 6380013,YES,NO
+
+		Window_YES
+			Window 6380014,OK
+
+				Window_OK Item_607924 >= 5 && ItemSpace >= 1
+					KillItem 607924,5
+					GiveItemEX 607910,1,"\n\n　안돼에, 소지품이 가득 찼잖아.\n　정리하라구!!　에헤헤……."
+
+				Window_OK Item_607924 >= 5
+					EndWindow 6380015
+
+				Window_OK
+					EndWindow 6380016
+
+		Window_NO
+			EndWindow 6380017
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 6380018
+
+
+
+
+

@@ -1,0 +1,22 @@
+#简单内心脚本 V1.0
+#作者：vampire 
+#2008.01.03
+
+
+#等级判定
+block	Level >= 50
+	EndWindow "\n\n\n@c　出于安全考虑等级低于50级是无法通过的。\n\n 赶紧练练在来把！"
+#职业判定
+block Job >= 443 && Job <= 443
+	EndWindow "\n\n\n@c　你不是医生来凑什么热闹？"
+#金钱判定
+block	Gold >= 10000
+	EndWindow "\n\n\n@c　没想到你比我还穷! \n\n 赶紧去赚够10000G买路钱在来把！"
+#职业+等级+金钱判定
+block
+	window "\n\n@c　你想进入马斯的内心世界么？\n  每次进入需要收取手续费10000G金币。 \n　选“是”进入，选“否”退出。\n\n　请选择。",yes,no
+	Window_NO
+	EndWindow "\n\n 那算了"
+	window_yes Level >= 50 && Gold >= 10000 && Job == 444
+	AddGold -10000
+	warp 0,30190,7,9

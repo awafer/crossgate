@@ -1,0 +1,69 @@
+#라이드 스킬 획득 퀘스트　　ｂｙ　토미타
+#
+#　　　코리나의 권
+
+###　생산계이고 히메히메단의 통행패스를 소지（１）
+block Item_607968 >= 1 && Job >= 200 && Job < 430
+	EndWindow 6920001
+
+
+
+###　생산계이고 히메히메단의 통행패스를 소지（２）
+block Item_607968 >= 1 && Job >= 450 && Job < 480
+	EndWindow 6920002
+
+
+
+###　전투계이고 히메히메단의 통행패스를 소지
+block Item_607968 >= 1
+	EndWindow 6920003
+
+
+
+###　생산계이고 통행패스를 소지하지 않음（１）
+block Job >= 200 && Job < 430
+	Window 6920004,OK
+
+		Window_OK Item_607968 >= 1
+			EndWindow 6920005
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607968,1,"\n\n　소지품이 가득 차서, 패스를 줄 수 없습니다."
+
+		Window_OK
+			EndWindow 6920006
+
+
+
+###　생산계이고 통행패스를 소지하지 않음（２）
+block Job >= 450 && Job < 480
+	Window 6920007,OK
+
+		Window_OK Item_607968 >= 1
+			EndWindow 6920008
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607968,1,"\n\n　소지품이 가득 차서, 패스를 줄 수 없습니다."
+
+		Window_OK
+			EndWindow 6920009
+
+
+
+###　전투계이고 통행패스를 소지하지 않음
+block
+	Window 6920010,OK
+
+		Window_OK Item_607968 >= 1
+			EndWindow 6920011
+
+		Window_OK ItemSpace >= 1
+			GiveItemEX 607968,1,"\n\n　소지품이 가득 차서, 패스를 줄 수 없습니다."
+
+		Window_OK
+			EndWindow 6920012
+
+
+
+
+

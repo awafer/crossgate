@@ -1,0 +1,5 @@
+#三凤中街超市传送
+#作者：vmpire
+#时间：2008.01.04
+block StrCmpChat == R
+warp 0,881,12,12

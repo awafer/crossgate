@@ -1,0 +1,105 @@
+#
+#여신 카렌（바로스 게이트/열림/전투 후）
+#
+
+##############  ##############
+block BImage == 101913 || BImage == 101910
+#15909·\n\n\n\n@c（※）변신상태에서는 대화할 수 없습니다
+	EndWindow 15909,OK
+
+##############  ##############
+block
+#\n\n\n\n\n@c…여는 자여, 잘 오셨습니다…
+	Window 15333,NEXT
+#\n\n\n\n\n@c…이렇게 이야기를 하는 것은 몇 번째일까요…
+	Window 15334,NEXT
+#\n\n\n\n\n@c리벨리우스는 침묵의 세계에서\n@c다시 잠들었습니다…
+	Window 15335,NEXT
+#\n\n\n\n\n@c……하지만 여는 자여……
+	Window 15336,NEXT
+#\n\n\n\n@c기억하고 계시지 않겠지만\n@c당신의 진짜 싸움은\n@c이제부터가 시작입니다…
+	Window 15337,NEXT
+#\n\n\n\n@c이 세계는 4000년을 주기로\n@c몇 번이고 같은 역사를 되풀이하고\n@c몇 번이고 똑 같은 잘못과 똑 같은 슬픔을\n@c되풀이해 왔습니다.…
+	Window 15338,NEXT
+#\n\n\n\n\n@c……조금도 틀리지 않고……
+	Window 15339,NEXT
+#\n\n\n\n\n@c…당신과 하는 이 대화도\n@c벌써 몇 천 번이나 되풀이하고 있는 것입니다…
+	Window 15340,NEXT
+#\n\n\n\n\n@c…닫힌 이 세계에는\n@c글자 그대로 「미래」가 없습니다…
+	Window 15341,NEXT
+#\n\n\n\n\n@c…희망은 고사하고\n@c절망마저 허락되지 않는 슬픈 세계…
+	Window 15342,NEXT
+#\n\n\n\n@c잔역에 사는 인간도\n@c우리들 신이라고 불리는 신역의 존재마저\n@c이 나선에서는 도망칠 수가 없습니다
+	Window 15343,NEXT
+#\n\n\n\n@c그리고 그 진실을 기억하고 있는 것은\n@c3명의 시간의 여신 중에서\n@c「미래」를 관장하는 저뿐입니다
+	Window 15344,NEXT
+#\n\n\n\n@c당신은 앞으로\n@c신화의 시대와 이 시대를\n@c오가면서\n@c역사를 만들어 가겠지요…
+	Window 15345,NEXT
+#\n\n\n\n@c…당신이 누구에 의해서…\n@c무엇을 위해\n@c생겨난 존재인지\n@c그것은 나도 모릅니다…
+	Window 15346,NEXT
+#\n\n\n\n@c…당신은 신역에도\n@c잔역에도 속하지 않는\n@c특별한 존재입니다…
+	Window 15347,NEXT
+#\n\n\n\n@c…여는 자여\n@c당신이 진정 열어야 할 것은\n@c이런\n@c문 따위는 아닙니다…
+	Window 15348,NEXT
+#\n\n\n\n\n@c…한없이 닫힌 이 나선세계…
+	Window 15349,NEXT
+#\n\n\n@c…이 저주받은 연쇄를\n@c언젠가 당신이\n@c부숴줄 것을 바라며\n@c나는 언제나\n@c당신을 이렇게 부릅니다…
+	Window 15350,NEXT
+#\n\n\n\n\n@c……「운명을 여는 자」라고……
+	Window 15351,NEXT
+#\n\n\n\n\n@c……때가 온 것 같습니다……
+	Window 15352,NEXT
+#\n\n\n\n@c…여는 자여\n@c언젠가 반드시\n@c이 세계의 운명을 끊고\n@c미래를 이어주십시오…
+	Window 15353,NEXT
+#\n\n\n\n\n@c…4000년 전에 다시 만나도록 하지요…
+	Window 15354,OK
+	Window_OK Item 18589 == 1
+	EndEvent 21 = 1
+	KillItem 18589,(15316)
+	LeaveGroup
+	Warp 0,1530,15,6
+
+	Window_OK Item 18590 == 1
+	EndEvent 21 = 1
+	KillItem 18590,(15316)
+	LeaveGroup
+	Warp 0,1530,15,6
+
+	Window_OK Item 18591 == 1
+	EndEvent 21 = 1
+	KillItem 18591,(15316)
+	LeaveGroup
+	Warp 0,1530,15,6
+
+	Window_OK Item 18592 == 1
+	EndEvent 21 = 1
+	KillItem 18592,(15316)
+	LeaveGroup
+	Warp 0,1530,15,6
+
+	Window_OK Item 18593 == 1
+	EndEvent 21 = 1
+	KillItem 18593,(15316)
+	LeaveGroup
+	Warp 0,1530,15,6
+
+	Window_OK Item 18594 == 1
+	EndEvent 21 = 1
+	KillItem 18594,(15316)
+	LeaveGroup
+	Warp 0,1530,15,6
+
+	Window_OK Item 18595 == 1
+	EndEvent 21 = 1
+	KillItem 18595,(15316)
+	LeaveGroup
+	Warp 0,1530,15,6
+
+	Window_OK
+	EndEvent 21 = 1
+	LeaveGroup
+	Warp 0,1530,15,6
+
+
+
+

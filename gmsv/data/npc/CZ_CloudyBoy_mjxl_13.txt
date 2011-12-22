@@ -1,0 +1,14 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Item 940120 == 1
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block Level >= 70 && Item 940112 == 1 && Item 940121 == 1
+
+	KillItem 940121,1
+	GiveItem 940120,1
+	EndWindow "\n\n\n@c　有你们的加入冥神军又强大了。\n不过我不能给予你们什么，你们还是去找冥主的坐骑吧。"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

@@ -1,0 +1,17 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Level >= 70 && Item 940112 == 1 && Item 940120 == 1
+
+	Window "\n\n\n@c　觉醒吧！沉睡的冥神之力！吾赐予你们真正的神力！",ok
+	Window_ok
+	KillItem 940120,1
+	GiveItem 940122,1
+	LeaveGroup
+	Warp 0,718,16,19
+
+block Item 940112 == 1 || Level >= 69
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

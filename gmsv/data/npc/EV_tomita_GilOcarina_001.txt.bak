@@ -1,0 +1,266 @@
+#길몬 피리 교환 NPC　　ｂｙ　토미타
+#
+#　　　바꾸기 할머니의 권
+
+###　우 클릭
+block StrCmpChat == R
+	Window 6140001,NEXT
+	Window 6140002,NEXT
+	EndWindow 6140003
+
+
+
+###　채팅 입력「소」
+block StrCmpChat == 3004826
+
+	If Item_608300 >= 1
+		Window 6140004,OK
+
+			Window_OK Item_608300 >= 1 && ItemSpace >= 1
+				KillItem 608300,1
+				GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+				EndBlock
+
+			Window_OK Item_608300 >= 1
+				EndWindow 6140005
+				EndBlock
+
+			Window_OK
+				EndWindow 6140006
+				EndBlock
+
+	else
+		If Item_608310 >= 1
+			Window 6140007,OK
+
+				Window_OK Item_608310 >= 1 && ItemSpace >= 1
+					KillItem 608310,1
+					GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+					EndBlock
+
+				Window_OK Item_608310 >= 1
+					EndWindow 6140008
+					EndBlock
+
+				Window_OK
+					EndWindow 6140009
+					EndBlock
+
+		else
+			If Item_608320 >= 1
+				Window 6140010,OK
+
+					Window_OK Item_608320 >= 1 && ItemSpace >= 1
+						KillItem 608320,1
+						GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+						EndBlock
+
+					Window_OK Item_608320 >= 1
+						EndWindow 6140011
+						EndBlock
+
+					Window_OK
+						EndWindow 6140012
+						EndBlock
+
+			else
+				If Item_608330 >= 1
+					Window 6140013,OK
+
+						Window_OK Item_608330 >= 1 && ItemSpace >= 1
+							KillItem 608330,1
+							GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+							EndBlock
+
+						Window_OK Item_608330 >= 1
+							EndWindow 6140014
+							EndBlock
+
+						Window_OK
+							EndWindow 6140015
+							EndBlock
+
+				else
+					EndWindow 6140016
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「중」
+block StrCmpChat == 3004827
+
+	If Item_608400 >= 1
+		Window 6140017,OK
+
+			Window_OK Item_608400 >= 1 && ItemSpace >= 1
+				KillItem 608400,1
+				GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+				EndBlock
+
+			Window_OK Item_608400 >= 1
+				EndWindow 6140018
+				EndBlock
+
+			Window_OK
+				EndWindow 6140019
+				EndBlock
+
+	else
+		If Item_608410 >= 1
+			Window 6140020,OK
+
+				Window_OK Item_608410 >= 1 && ItemSpace >= 1
+					KillItem 608410,1
+					GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+					EndBlock
+
+				Window_OK Item_608410 >= 1
+					EndWindow 6140021
+					EndBlock
+
+				Window_OK
+					EndWindow 6140022
+					EndBlock
+
+		else
+			If Item_608420 >= 1
+				Window 6140023,OK
+
+					Window_OK Item_608420 >= 1 && ItemSpace >= 1
+						KillItem 608420,1
+						GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+						EndBlock
+
+					Window_OK Item_608420 >= 1
+						EndWindow 6140024
+						EndBlock
+
+					Window_OK
+						EndWindow 6140025
+						EndBlock
+
+			else
+				If Item_608430 >= 1
+					Window 6140026,OK
+
+						Window_OK Item_608430 >= 1 && ItemSpace >= 1
+							KillItem 608430,1
+							GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+							EndBlock
+
+						Window_OK Item_608430 >= 1
+							EndWindow 6140027
+							EndBlock
+
+						Window_OK
+							EndWindow 6140028
+							EndBlock
+
+				else
+					EndWindow 6140029
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　채팅 입력「대」
+block StrCmpChat == 3004828
+
+	If Item_608500 >= 1
+		Window 6140030,OK
+
+			Window_OK Item_608500 >= 1 && ItemSpace >= 1
+				KillItem 608500,1
+				GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+				EndBlock
+
+			Window_OK Item_608500 >= 1
+				EndWindow 6140031
+				EndBlock
+
+			Window_OK
+				EndWindow 6140032
+				EndBlock
+
+	else
+		If Item_608510 >= 1
+			Window 6140033,OK
+
+				Window_OK Item_608510 >= 1 && ItemSpace >= 1
+					KillItem 608510,1
+					GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+					EndBlock
+
+				Window_OK Item_608510 >= 1
+					EndWindow 6140034
+					EndBlock
+
+				Window_OK
+					EndWindow 6140035
+					EndBlock
+
+		else
+			If Item_608520 >= 1
+				Window 6140036,OK
+
+					Window_OK Item_608520 >= 1 && ItemSpace >= 1
+						KillItem 608520,1
+						GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+						EndBlock
+
+					Window_OK Item_608520 >= 1
+						EndWindow 6140037
+						EndBlock
+
+					Window_OK
+						EndWindow 6140038
+						EndBlock
+
+			else
+				If Item_608530 >= 1
+					Window 6140039,OK
+
+						Window_OK Item_608530 >= 1 && ItemSpace >= 1
+							KillItem 608530,1
+							GiveItemEX 608700,1,"\n\n　정리하자, 정리하자, \n　소지품이 가득, 줄 수가 없어."
+							EndBlock
+
+						Window_OK Item_608530 >= 1
+							EndWindow 6140040
+							EndBlock
+
+						Window_OK
+							EndWindow 6140041
+							EndBlock
+
+				else
+					EndWindow 6140042
+					EndBlock
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+
+

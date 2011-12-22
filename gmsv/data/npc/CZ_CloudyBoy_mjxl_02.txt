@@ -1,0 +1,11 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Level >= 10 && Item 940114 == 1
+
+	Window "\n\n\n@c　恩。你愿意堕落么？加入黑暗的势力，是要经过严峻的考验的。\n\n来吧。先让我看看你的实力和决心！",ok
+	Window_ok
+	Encount 3|0,718,16,17|||||0|||350020|||||||||
+
+block Level <= 9
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

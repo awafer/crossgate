@@ -1,0 +1,394 @@
+#モンス?ーコイン　[両替小]ＮＰＣ
+#
+#
+#
+#
+#ストウ?ツヤ
+#
+#
+#
+
+
+#モンス?ーコインの何れかを１つでも所持の場合。
+
+
+Block Leak1Item_620035 >= 1 || Leak1Item_620036 >= 1 || Leak1Item_621006 >= 1
+
+	Window "\n\n　ここはモンス?ーコイン両替所っす。\n　大きなコインを小さなコインに\n　するところっす。",Next
+
+	Window "\n\n　ただし両替できるのは、\n　10万Ｍ1枚を1Ｍ万10枚\n　1万Ｍ1枚を1000Ｍ10枚\n　1000Ｍ1枚を10Ｍ100枚\n　の3通りっす。",Next
+
+	Window "\n\n　にゃ、モンス?ーコインを\n　持っているっすね。\n　両替するっすか？",Yes,No
+	
+		Window_No
+		
+			GotoF case11
+			
+		Window_Yes ItemSpace == 0
+						
+			GotoF case12
+			
+		Window_Yes Leak1Item_620035 >= 1 || Leak1Item_620036 >= 1 || Leak1Item_621006 >= 1
+						
+				GotoF case2
+							
+		Window_Yes
+			
+			GotoF case10
+			
+		EndBlock
+	
+	
+	
+	
+Block
+
+
+	Window "\n\n　ここはモンス?ーコイン両替所っす。\n　大きなコインを小さなコインに\n　するところっす。",Next
+
+	EndWindow "\n\n　ただし両替できるのは、\n　10万Ｍ1枚を1万Ｍ10枚\n　1万Ｍ1枚を1000Ｍ10枚\n　1000Ｍ1枚を10Ｍ100枚\n　の3通りっす。"
+	
+Block
+
+	*case2*
+	
+	
+	
+	if Leak1Item_620036 >= 1
+		
+		
+		Window "\n\n　10万Ｍを1枚っすね。\n　1万Ｍが10枚になるっす。",Yes,No
+			
+			
+			Window_Yes Leak1Item_620036 >= 1 && ItemSpace >= 1
+			
+				KillLeak1Item 620036,1
+			 	GiveLeak1Item 620035,10
+			 	
+			 	GotoF case20
+			 	
+			
+			Window_Yes ItemSpace == 0
+			
+				GotoF case12
+			
+			
+			Window_Yes Leak1Item_620036 < 1
+			
+				GotoF case10
+			
+			Window_Yes
+			
+				GotoF case10
+				
+			Window_No  Leak1Item_620035 < 1 && Leak1Item_621006 < 1
+			
+				GotoF case11
+				
+				
+			Window_No
+			
+				GotoF case4
+				
+				
+				
+				EndBlock
+	else
+		
+		*case4*
+		
+		if Leak1Item_620035 >= 1
+		
+			
+			Window "\n\n　1万Ｍを1枚っすね。\n　1000Ｍが10枚になるっす。",Yes,No
+			
+				Window_Yes Leak1Item_620035 >= 1 && ItemSpace >= 1
+				
+					KillLeak1Item 620035,1
+					GiveLeak1item 621006,10
+				
+					GotoF case21
+			
+				Window_Yes ItemSpace == 0
+			
+					GotoF case12
+			
+				Window_Yes Leak1Item_620035 < 1
+			
+					GotoF case10
+					
+				Window_Yes
+			
+					GotoF case10
+					
+				Window_No Leak1Item_621006 < 1
+			
+					GotoF case11
+					
+				Window_No
+			
+					GotoF case5
+					
+					EndBlock
+					
+		else
+		
+			*case5*
+			
+			if Leak1Item_621006 >= 1
+			
+			
+				Window "\n\n　1000Ｍを1枚っすね。\n　10Ｍが100枚になるっす。",Yes,No
+				
+				
+					Window_Yes Leak1Item_621006 >= 1 && ItemSpace >= 1
+					
+						KillLeak1Item 621006,1
+						GiveLeak1Item 620034,100
+					
+						GotoF case22
+					
+					Window_Yes ItemSpace == 0
+					
+						GotoF case12
+						
+					Window_Yes Leak1Item_621006 < 1
+					
+						GotoF case10
+						
+					Window_Yes
+			
+						GotoF case10
+						
+					Window_No
+			
+						GotoF case11
+						
+			
+						EndBlock
+						
+						
+				else
+					
+					EndWindow "\n\n　必要な枚数を用意するっす。"
+					
+					
+	endif
+		endif
+			endif
+				
+	EndWindow "\n\n　必要な枚数を用意するっす。"
+					
+				
+	
+	EndBlock
+	
+	
+	
+Block
+
+	*case23*
+	
+	
+	
+	if Leak1Item_620036 >= 1
+		
+		
+		Window "\n\n　10万Ｍを1枚っすね。\n　1万Ｍが10枚になるっす。",Yes,No
+			
+			
+			Window_Yes Leak1Item_620036 >= 1 && ItemSpace >= 1
+			
+				KillLeak1Item 620036,1
+			 	GiveLeak1Item 620035,10
+			 	
+			 	GotoF case20
+			 	
+			
+			Window_Yes ItemSpace == 0
+			
+				GotoF case12
+			
+			
+			Window_Yes Leak1Item_620036 < 1
+			
+				GotoF case10
+			
+			Window_Yes
+			
+				GotoF case10
+				
+				
+			Window_No
+			
+				GotoF case11
+				
+				
+				
+				EndBlock
+	else
+		
+		*case24*
+		
+		if Leak1Item_620035 >= 1
+		
+			
+			Window "\n\n　1万Ｍを1枚っすね。\n　1000Ｍが10枚になるっす。",Yes,No
+			
+				Window_Yes Leak1Item_620035 >= 1 && ItemSpace >= 1
+				
+					KillLeak1Item 620035,1
+					GiveLeak1item 621006,10
+				
+					GotoF case21
+			
+				Window_Yes ItemSpace == 0
+			
+					GotoF case12
+			
+				Window_Yes Leak1Item_620035 < 1
+			
+					GotoF case10
+					
+				Window_Yes
+			
+					GotoF case10
+					
+					
+				Window_No
+			
+					GotoF case11
+					
+					EndBlock
+					
+		else
+		
+			*case25*
+			
+			if Leak1Item_621006 >= 1
+			
+			
+				Window "\n\n　1000Ｍを1枚っすね。\n　10Ｍが100枚になるっす。",Yes,No
+				
+				
+					Window_Yes Leak1Item_621006 >= 1 && ItemSpace >= 1
+					
+						KillLeak1Item 621006,1
+						GiveLeak1Item 620034,100
+					
+						GotoF case22
+					
+					Window_Yes ItemSpace == 0
+					
+						GotoF case12
+						
+					Window_Yes Leak1Item_621006 < 1
+					
+						GotoF case10
+						
+					Window_Yes
+			
+						GotoF case10
+						
+					Window_No
+			
+						GotoF case11
+						
+			
+						EndBlock
+						
+						
+				else
+					
+					EndWindow "\n\n　必要な枚数を用意するっす。"
+					
+					
+	endif
+		endif
+			endif
+				
+	EndWindow "\n\n　必要な枚数を用意するっす。"
+					
+				
+	
+	EndBlock
+			
+Block
+
+	*case20*
+	
+	Window "\n\n　もう一度両替するっすか？",Yes,No
+	
+		Window_yes Leak1Item_620036 >= 1
+	
+			GotoB case23
+		
+		Window_yes
+	
+			endWindow "\n\n　もう両替できないっす。"
+			
+		Window_No
+		
+			GotoF case11
+			
+Block
+
+	*case21*
+	
+	Window "\n\n　もう一度両替するっすか？",Yes,No
+	
+		Window_yes  Leak1Item_620035 >= 1
+	
+			GotoB case24
+		
+		Window_yes
+	
+			endWindow "\n\n　もう両替できないっす。"
+			
+		Window_No
+		
+			GotoF case11
+			
+			
+Block
+
+	*case22*
+	
+	Window "\n\n　もう一度両替するっすか？",Yes,No
+	
+		Window_yes Leak1Item_621006 >= 1
+	
+			GotoB case25
+		
+		Window_yes
+	
+			endWindow "\n\n　もう両替できないっす。"
+			
+		Window_No
+		
+			GotoF case11
+
+#モンス?ーコインを途中で消した場合（ケース１０番）
+
+Block
+
+	*case10*
+
+	EndWindow "\n\n　持ってないっすよ。"
+	
+	
+	
+#断った場合の反応（ケース１１番）
+Block
+	*case11*
+	
+	EndWindow "\n\n　そうっすか。いつでも来てくださいっす。"
+	
+#アイテ?がいっぱいのとき（ケース１２番）
+Block
+	*case12*
+	
+	EndWindow "\n\n　アイテ?がいっぱいっす。"
+
+
+

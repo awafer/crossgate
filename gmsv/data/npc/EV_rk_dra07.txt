@@ -1,0 +1,19 @@
+#흑룡의 사자(15541)
+#
+
+block Item 18768 != 0
+#\n\n　때를 기다려라
+ Window 21243,yes,no
+  Window_yes ItemSpace != 0
+  giveitem 18767,1
+  LeaveGroup
+   Warp 0,1530,15,6
+############## 아이템 가득 참 ##############
+	Window_yes
+         Endwindow 10000
+	Window_no
+
+block
+ Window 21311,next
+ Endwindow 21235
+

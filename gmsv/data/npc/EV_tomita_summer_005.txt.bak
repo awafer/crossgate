@@ -1,0 +1,30 @@
+#　수확제 던젼（구 여름방학 던젼）　　ｂｙ　토미타
+#
+#　　　상어신 에이비스의 권
+
+###　파티를 이루고 있는 경우
+
+block Group > 1
+	EndWindow 8420001
+
+
+
+###　포상수여
+
+block
+	Window 8420002,NEXT
+	Window 8420003,OK
+
+		Window_OK ItemSpace < 2
+			EndWindow 8420004
+
+		Window_OK
+			GiveItemEX 607941,1,"\n\n　지금의 그대에게 포상을 내리는 것은 무리다.\n　소지품을 정리하고 다시 오도록 하라."
+			GiveItem(607928%90,607929%10)
+			LeaveGroup
+			Warp 0,59510,58,63
+
+
+
+
+

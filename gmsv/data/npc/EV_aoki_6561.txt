@@ -1,0 +1,258 @@
+#알바네스 촌장 타라니아
+#대문자, 소문자의 구별은 없음
+#'_'는 읽을 때 건너뜀
+
+#====여는 자적인 직인======#
+
+##########검직인##########
+block Job == 203 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########도끼직인##########
+block Job == 213 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########창직인##########
+block Job == 223 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########활직인##########
+block Job == 233 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########지팡이직인##########
+block Job == 243 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########부메랑직인##########
+block Job == 253 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+
+##########나이프직인##########
+block Job == 263 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########투구직인##########
+block Job == 273 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########모자직인##########
+block Job == 283 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########갑옷직인##########
+block Job == 293 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##################옷직인####################
+block Job == 303 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########로브직인##########
+block Job == 313 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########부츠직인##########
+block Job == 323 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########구두직인##########
+block Job == 333 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########방패직인##########
+block Job == 343 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########조리사##########
+block Job == 353 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########약제사##########
+block Job == 363 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########수리무기##########
+block Job == 373 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########수리방어구##########
+block Job == 383 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########감정사##########
+block Job == 393 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########각인##########
+block Job == 403 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########탐정##########
+block Job == 413 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+##########선인##########
+block Job == 423 && HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14155
+########여는 자적인 사람###################
+block HaveTitle == 61
+	Window 14152,OK
+	Window_OK
+	EndWindow 14154
+
+
+##########검직인##########
+block Job == 203
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########도끼직인##########
+block Job == 213
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########창직인##########
+block Job == 223
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########활직인##########
+block Job == 233
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+##########지팡이직인##########
+block Job == 243
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+##########부메랑직인##########
+block Job == 253
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+##########나이프직인##########
+block Job == 263
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########투구직인##########
+block Job == 273
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########모자직인##########
+block Job == 283
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########갑옷직인##########
+block Job == 293
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##################옷직인####################
+block Job == 303
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########로브직인##########
+block Job == 313
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########부츠직인##########
+block Job == 323
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########구두직인##########
+block Job == 333
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########방패직인##########
+block Job == 343
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########조리사##########
+block Job == 353
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########약제사##########
+block Job == 363
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########수리무기##########
+block Job == 373
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########수리방어구##########
+block Job == 383
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########감정사##########
+block Job == 393
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########각인##########
+block Job == 403
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########탐정##########
+block Job == 413
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+##########선인##########
+block Job == 423
+	Window 14152,OK
+	Window_OK
+	EndWindow 14153
+
+
+##########通常######
+block
+	EndWindow 14152
+#이런 북쪽 나라까지 잘도 왔구먼.
+#아무것도 대접할 건 없지만
+#뭐, 몸이라도 좀 녹이고 가시게나

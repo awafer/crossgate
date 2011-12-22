@@ -1,0 +1,103 @@
+#
+#문지기 uxisupu
+#
+
+### 기억을 가지고 있다 ###
+block Item 18780 >= 1 || Item 18781 >= 1 || Item 18782 >= 1
+ Endwindow 21338
+
+### 기억을 가지고 있다 ###
+block Item 18766 >= 1
+ Endwindow 21259
+block Item 18767 >= 1
+ Endwindow 21259
+### 그룹 튕김 ###
+block Group != 1
+ EndWindow 21249
+############## 액커스 클리어 하지 않았따 ##############
+block EndEvent 19 != 1
+#\n\n　불꽃의 봉인에 간섭한 자가 아니라면 이 앞을 알 필요는 없다.\n\n　꺼져라.
+	EndWindow 21250
+############## 프리아보로스를 클리어했다 ##############
+block EndEvent 18 == 1
+#\n\n　불꽃의 봉인에 간섭한 자여….\n\n　반드시 나타날 거라고 생각하고 있었다.\n　너에게는 자신의 입장을 정할 각오는 있는가?
+	Window 21251,Yes,No
+         Window_Yes Group == 1
+          Warp 0,15531,49,32
+### 그룹 튕김 ###
+         Window_Yes Group != 1
+          EndWindow 21249
+         Window_No
+
+
+
+
+############## 액커스 클리어 했다 ##############
+block EndEvent 19 == 1 && Item 18588 == 0
+#\n\n　뭐, 뭐야, 이 거울을 갖고 싶은 건가!?
+	Window 15281,YES,NO
+	Window_NO
+#\n\n　뭐야. 필요 없으면 저리 가라구.
+	EndWindow 15282,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0
+#\n\n　으~음. 나도 사용법을 잘 모르겠고, 줘도 상관없지만 역시 공짜로는 말이지……어때, 10000Gold로 사지 않겠어?
+	Window 15283,YES,NO
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Gold < 10000
+#\n\n　뭐야, 무일푼이잖아.
+	EndWindow 15284,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Gold >= 10000 && ItemSpace != 0
+	AddGold -10000
+	GiveItem 18588
+#\n\n　오오, 굉장한 부자로군, 당신. 그럼 이거 줄게.
+	EndWindow 15285,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Gold >= 10000 && ItemSpace == 0
+#\n\n　뭐야, 소지품이 가득 찼잖아.
+	EndWindow 15286,OK
+	Window_NO
+#\n\n　으음. 그럼 이렇게 하지. 당신, 가끔 마족이 떨어트린다는 「마족의 크리스탈」을 알고 있나? 그건 말이지, 바다의 남자에게 있어서 귀중한 부적이 된다는군. 당신이 그걸 가지고 있자면 교환해줘도 좋아.
+	Window 15287,YES,NO
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 18450 == 0
+#\n\n　어이, 거짓말 마. 안 가지고 있잖아.
+	EndWindow 15288,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 18450 >= 1 && ItemSpace != 0
+	KillItem 18450
+	GiveItem 18588
+#\n\n　오오, 이건 굉장하군. 그럼 이거 줄게.
+	EndWindow 15289,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 18450 >= 1 && ItemSpace == 0
+#\n\n　뭐야, 소지품이 가득 찼잖아.
+	EndWindow 15286,OK
+	Window_NO
+#\n\n　으음. 그럼 말이지, 당신 「찌라시 초밥」이라고 알고 있어? 우리들 서민은 일생 동안 못 먹어볼 사치품이지만, 한번 엄마랑 애들한테 먹여주고 싶어. 당신이 사준다면 이것과 교환해도 좋아. 하지만 ３인분이 아니면 안돼.
+	Window 15290,YES,NO
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 15216 < 3
+#\n\n　어이어이, 질 나쁜 농담은 관둬. 확실한 ３인분의 「찌라시 초밥」이 아니면 교환은 못해줘.
+	EndWindow 15291,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 15216 >= 3 && ItemSpace != 0
+	KillItem 15216,3
+	GiveItem 18588
+#\n\n　오오, 이게 「찌라시 초밥」인가! 낡아빠진 거울 따위보다 이쪽이 몇 배나 가치가 있지. 지, 이건 줄게.
+	EndWindow 15292,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && Item 15216 >= 3 && ItemSpace == 0
+#\n\n　뭐야, 소지품이 가득 찼잖아.
+	EndWindow 15286,OK
+	Window_NO
+#\n\n　뭐야 너, 아까부터 이쪽이 양심적으로 상담하고 있는데 기어오르고. 나랑 해보겠다는 거야?
+	Window 15293,YES,NO
+	Window_NO
+#\n\n　흥, 돈도 패기도 없으면 빨랑 돌아가.
+	EndWindow 15294,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && ItemSpace == 0
+#\n\n　흥, 돈도 패기도 없으면 빨랑 돌아가.
+	EndWindow 15294,OK
+	Window_YES EndEvent 19 == 1 && Item 18588 == 0 && ItemSpace != 0
+	Encount 2|0,0,0,0||0|||||0|10012|||||||||
+
+
+
+
+
+
+
+
+

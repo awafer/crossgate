@@ -1,0 +1,16 @@
+#병에 누운 자(15557)
+#
+
+block
+ Changepal 15,180
+#\n용의 목소리：\n\n　사람을 죽인 자가 네 앞에 있다고 하자.\n\n　죽음으로서 그 죄값을 치르게 할텐가?（네를 선택）\n　아니면 죄를 묻지 않고 석방할텐가?（아니오를 선택）
+ Window 21321,yes,no
+#
+  Window_yes
+   LeaveGroup
+   Warp 0,15560,15,19
+  Window_no
+   LeaveGroup
+   Warp 0,15560,11,19
+
+

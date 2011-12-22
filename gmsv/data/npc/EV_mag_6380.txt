@@ -1,0 +1,102 @@
+#아스테리아 신관
+#성찬의 방에 있다
+
+############## 촛대 소거 ##############
+block Item 18492 != 0
+	KillItem 18492
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 촛대 소거 ##############
+block Item 18493 != 0
+	KillItem 18493
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 촛대 소거 ##############
+block Item 18494 != 0
+	KillItem 18494
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 촛대 소거 ##############
+block Item 18495 != 0
+	KillItem 18495
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 촛대 소거 ##############
+block Item 18496 != 0
+	KillItem 18496
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 촛대 소거 ##############
+block Item 18497 != 0
+	KillItem 18497
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 촛대 소거 ##############
+block Item 18498 != 0
+	KillItem 18498
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 촛대 소거 ##############
+block Item 18499 != 0
+	KillItem 18499
+#\n\n　그 촛대는 돌려주십시오.
+	EndWindow 14764,OK
+
+############## 남자 캐릭터의 경우 ##############
+block BBImage >= 100000 && BBImage <= 100173
+#\n\n　제일 안쪽의 방에서 블메일 총대사교님이 기다리고 계십니다.
+	Window 14735,OK
+	Window_OK
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24003,9,24
+
+block BBImage >= 105000 && BBImage <= 105173
+#\n\n　제일 안쪽의 방에서 블메일 총대사교님이 기다리고 계십니다.
+	Window 14735,OK
+	Window_OK
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24003,9,24
+
+block BBImage >= 106000 && BBImage <= 106173
+#\n\n　제일 안쪽의 방에서 블메일 총대사교님이 기다리고 계십니다.
+	Window 14735,OK
+	Window_OK
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24003,9,24
+
+############## 여자 캐릭터의 경우 ##############
+block BBImage >= 100250 && BBImage <= 100423
+#\n\n　제일 안쪽의 방에서 블메일 총대사교님이 기다리고 계십니다.
+	Window 14735,OK
+	Window_OK
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24003,10,75
+
+block BBImage >= 105250 && BBImage <= 105423
+#\n\n　제일 안쪽의 방에서 블메일 총대사교님이 기다리고 계십니다.
+	Window 14735,OK
+	Window_OK
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24003,10,75
+
+block BBImage >= 106250 && BBImage <= 106423
+#\n\n　제일 안쪽의 방에서 블메일 총대사교님이 기다리고 계십니다.
+	Window 14735,OK
+	Window_OK
+	NowEvent 4 = 0
+	LeaveGroup
+	Warp 0,24003,10,75
+
+

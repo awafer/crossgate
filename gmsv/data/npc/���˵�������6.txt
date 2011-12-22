@@ -1,0 +1,16 @@
+block
+		window "\n\n@c　百人道场卷六，使用后能得到奖品或传送到下一组\n　选“是”领取奖品，选“否”进入下一对话框。\n\n　请选择。\n\n\n　　*****领取奖品或传送后，道场卷会消失。*****",yes,no
+
+	window_yes  item 795006 ==1 && itemspace >= 1
+		killitem 795006
+		giveitem (18851,18852,18853,18854,18855,18856,18857,18858,18859,18860,18861,18862,18863,18864,18865),1
+		endwindow "\n\n\n@c　恭喜您，您已领到奖品，请收好!"
+	window_yes itemspace == 0
+		endwindow "\n\n　您的东西太多了。"
+	window_no
+		window "\n\n@c　您确定要传送到下一组道场吗？\n\n\n\n\n\n　　　　　*****传送后，道场卷将会消失。*****",yes,no
+	window_yes  item 795006 ==1
+		LeaveGroup
+		killitem 795006
+		warp 0,60061,5,10
+	window_no

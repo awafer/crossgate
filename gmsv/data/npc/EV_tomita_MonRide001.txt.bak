@@ -1,0 +1,604 @@
+#라이드 스킬 획득 이벤트　　ｂｙ　토미타
+#
+#　　　하리야마 교관의 권
+
+###　스킬“라이더”를 소지
+block SkillLevel_1009 >= 1
+	EndWindow 7650001
+
+
+
+###　라이드 교습부를 여러 개 소지
+block Item_607969 > 1
+	EndWindow 7650002
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『14』이상
+block Item_607969 == 1 && StampCount_607969 >= 14
+	EndWindow 7650003
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『13』
+block Item_607969 == 1 && StampCount_607969 == 13
+
+	If Item_9401 >= 1
+		Window 7650004,NEXT
+		Window 7650005,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650006
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9401 >= 1
+				LeaveGroup
+				Encount 3|0,59715,201,169||0|||||0|305270|||||||||
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 13
+				EndWindow 7650007
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650008
+				EndBlock
+
+			Window_OK
+				EndWindow 7650009
+				EndBlock
+
+	else
+		If Item_9411 >= 1
+			Window “\n\n　가지고 왔나.…음, 틀림없군.\n　좋아, 이걸로 제１단계의 교습은 끝이다.\n　계속해서 수료검정을 행한다.",NEXT
+			Window 7650010,OK
+
+				Window_OK Item_607969 > 1
+					EndWindow 7650011
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9411 >= 1
+					Encount 3|0,59715,201,169||0|||||0|305270|||||||||
+					EndBlock
+
+				Window_OK Item_607969 == 1 && StampCount_607969 == 13
+					EndWindow 7650012
+					EndBlock
+
+				Window_OK Item_607969 == 1
+					EndWindow 7650013
+					EndBlock
+
+				Window_OK
+					EndWindow 7650014
+					EndBlock
+
+		else
+			If Item_9421 >= 1
+				Window “\n\n　가지고 왔나.…음, 틀림없군.\n　좋아, 이걸로 제１단계의 교습은 끝이다.\n　계속해서 수료검정을 행한다.",NEXT
+				Window 7650015,OK
+
+					Window_OK Item_607969 > 1
+						EndWindow 7650016
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9421 >= 1
+						LeaveGroup
+						Encount 3|0,59715,201,169||0|||||0|305270|||||||||
+						EndBlock
+
+					Window_OK Item_607969 == 1 && StampCount_607969 == 13
+						EndWindow 7650017
+						EndBlock
+
+					Window_OK Item_607969 == 1
+						EndWindow 7650018
+						EndBlock
+
+					Window_OK
+						EndWindow 7650019
+						EndBlock
+
+			else
+				If Item_9431 >= 1
+					Window “\n\n　가지고 왔나.…음, 틀림없군.\n　좋아, 이걸로 제１단계의 교습은 끝이다.\n　계속해서 수료검정을 행한다.",NEXT
+					Window 7650020,OK
+
+						Window_OK Item_607969 > 1
+							EndWindow 7650021
+							EndBlock
+
+						Window_OK Item_607969 == 1 && StampCount_607969 == 13 && Item_9431 >= 1
+							LeaveGroup
+							Encount 3|0,59715,201,169||0|||||0|305270|||||||||
+							EndBlock
+
+						Window_OK Item_607969 == 1 && StampCount_607969 == 13
+							EndWindow 7650022
+							EndBlock
+
+						Window_OK Item_607969 == 1
+							EndWindow 7650023
+							EndBlock
+
+						Window_OK
+							EndWindow 7650024
+							EndBlock
+
+				else
+					EndWindow 7650025
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『12』
+block Item_607969 == 1 && StampCount_607969 == 12
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7650026
+		EndBlock
+
+	else
+		Window 7650027,NEXT
+		Window 7650028,NEXT
+		Window 7650029,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650030
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 12
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650031
+				EndBlock
+
+			Window_OK
+				EndWindow 7650032
+				EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『11』
+block Item_607969 == 1 && StampCount_607969 == 11
+
+	If Item_18313 >= 3
+		Window 7650033,NEXT
+		Window 7650034,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650035
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 11 && Item_18313 >= 3
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 11
+				EndWindow 7650036
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650037
+				EndBlock
+
+			Window_OK
+				EndWindow 7650038
+				EndBlock
+
+	else
+		Window 7650039,NEXT
+		EndWindow 7650040
+		EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『10』
+block Item_607969 == 1 && StampCount_607969 == 10
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7650041
+		EndBlock
+
+	else
+		Window 7650042,NEXT
+		Window 7650043,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650044
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 10
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650045
+				EndBlock
+
+			Window_OK
+				EndWindow 7650046
+				EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『9』
+block Item_607969 == 1 && StampCount_607969 == 9
+
+	If Item_18312 >= 3
+		Window 7650047,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650048
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 9 && Item_18312 >= 3
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 9
+				EndWindow 7650049
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650050
+				EndBlock
+
+			Window_OK
+				EndWindow 7650051
+				EndBlock
+
+	else
+		Window 7650052,NEXT
+		EndWindow 7650053
+		EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『8』
+block Item_607969 == 1 && StampCount_607969 == 8
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7650054
+		EndBlock
+
+	else
+		Window 7650055,NEXT
+		Window 7650056,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650057
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 8
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650058
+				EndBlock
+
+			Window_OK
+				EndWindow 7650059
+				EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『7』
+block Item_607969 == 1 && StampCount_607969 == 7
+
+	If Item_18311 >= 3
+		Window 7650060,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650061
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 7 && Item_18311 >= 3
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 7
+				EndWindow 7650062
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650063
+				EndBlock
+
+			Window_OK
+				EndWindow 7650064
+				EndBlock
+
+	else
+		Window 7650065,NEXT
+		EndWindow 7650066
+		EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『6』
+block Item_607969 == 1 && StampCount_607969 == 6
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7650067
+		EndBlock
+
+	else
+		Window 7650068,NEXT
+		Window 7650069,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650070
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 6
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650071
+				EndBlock
+
+			Window_OK
+				EndWindow 7650072
+				EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『5』
+block Item_607969 == 1 && StampCount_607969 == 5
+
+	If Item_18310 >= 3
+		Window 7650073,NEXT
+		Window 7650074,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650075
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 5 && Item_18310 >= 3
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 5
+				EndWindow 7650076
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650077
+				EndBlock
+
+			Window_OK
+				EndWindow 7650078
+				EndBlock
+
+	else
+		Window 7650079,NEXT
+		EndWindow 7650080
+		EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『4』
+block Item_607969 == 1 && StampCount_607969 == 4
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7650081
+		EndBlock
+
+	else
+		Window 7650082,NEXT
+		Window 7650083,NEXT
+		Window 7650084,NEXT
+		Window 7650085,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650086
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 4
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650087
+				EndBlock
+
+			Window_OK
+				EndWindow 7650088
+				EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『3』
+block Item_607969 == 1 && StampCount_607969 == 3
+
+	If Item_12800 >= 1
+		Window 7650089,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650090
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 3 && Item_12800 >= 1
+				KillItem 12800,1
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 3
+				EndWindow 7650091
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650092
+				EndBlock
+
+			Window_OK
+				EndWindow 7650093
+				EndBlock
+
+	else
+		EndWindow 7650094
+		EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『2』
+block Item_607969 == 1 && StampCount_607969 == 2
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7650095
+		EndBlock
+
+	else
+		Window 7650096,NEXT
+		Window 7650097,NEXT
+		Window 7650098,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650099
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 2
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650100
+				EndBlock
+
+			Window_OK
+				EndWindow 7650101
+				EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『1』
+block Item_607969 == 1 && StampCount_607969 == 1
+
+	If Item_12503 >= 1
+		Window 7650102,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650103
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 1 && Item_12503 >= 1
+				KillItem 12503,1
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 1
+				EndWindow 7650104
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650105
+				EndBlock
+
+			Window_OK
+				EndWindow 7650106
+				EndBlock
+
+	else
+		EndWindow 7650107
+		EndBlock
+
+	endif
+
+
+
+###　라이드 교습부를 １통 소지하고, 스탬프『0』
+block Item_607969 == 1
+
+	If ItemCreateTime_607969 < 1440
+#	If ItemCreateTime_607969 < 5
+		EndWindow 7650108
+		EndBlock
+
+	else
+		Window 7650109,NEXT
+		Window 7650110,OK
+
+			Window_OK Item_607969 > 1
+				EndWindow 7650111
+				EndBlock
+
+			Window_OK Item_607969 == 1 && StampCount_607969 == 0
+				AddStampCount 607969,+1
+				EndBlock
+
+			Window_OK Item_607969 == 1
+				EndWindow 7650112
+				EndBlock
+
+			Window_OK
+				EndWindow 7650113
+				EndBlock
+
+	endif
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	Window 7650114,NEXT
+	Window 7650115,YES,NO
+
+		Window_YES ItemSpace >= 1
+			Window 7650116,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607969,1,"\n\n　라이드 교습부를 줄 수 없잖아.\n　소지품 정리 정도는 확실히 해둬!\n　가시로 찌른다!!"
+
+				Window_OK
+					EndWindow 7650117
+
+		Window_YES
+			EndWindow 7650118
+
+		Window_NO
+			EndWindow 7650119
+
+
+
+
+

@@ -1,0 +1,127 @@
+#! /bin/sh			
+			
+			
+############  최초의 인수로 처리를 분할  ##########			
+case "$1" in			
+			
+#############  기동 처리   ##################			
+  start)			
+#------- 만약을 위해, stopcount 를 지웁니다.-----			
+	if [ -f stopcount ]; then		
+		rm -f stopcount	
+	fi		
+			
+#--------  gmsv 의 프로세스 ID를 조사한다			
+	pid=`perl findpid.perl gmsv__`		
+	if [ $pid -gt 0 ]		
+	then		
+		echo "already moving"	
+		while [ 1 ]	
+		do	
+			sleep 2
+		done	
+	fi		
+	echo "Starting gmsv server"		
+	echo "use 'tail -f gmsvlog' to see stderr output."		
+	rm gmsv.end >/dev/null 2>&1		
+	./while.csh &		
+	echo		
+	;;		
+			
+			
+#############  정지 처리   ##################			
+  stop)			
+#------- 만약을 위해, gmsv.end 를 지웁니다.-----			
+	if [ -f gmsv.end ]; then		
+		rm -f gmsv.end	
+	fi		
+			
+#---------- 우선, while.csh 로부터 멈춘다 --------			
+	echo "Stopping while.csh"		
+			
+#---------    while.csh 의 프로세스 ID를 찾는다.--------------			
+	pid=`perl findpid.perl while.csh`		
+	echo "Process ID is: $pid"		
+			
+#---------     while.csh 에 TERM 시그널을 보낸다.(정지 명령) ------			
+	kill -TERM "$pid"		
+			
+#---------   gmsv 의 정지 처리를 한다. ------------			
+	echo "Stopping gmsv server"		
+			
+#--------  gmsv 의 프로세스 ID를 조사한다			
+	pid=`perl findpid.perl gmsv__`		
+			
+####  시그널을 보낸다			
+	kill -TERM "$pid"		
+			
+####   gmsv.end 를 할 수 있을 때까지 기다린다.			
+	until test -f gmsv.end;		
+	do		
+		sleep 1;	
+	done		
+			
+####  gmsv 의 스렛드를 전부 강제적으로 죽인다.			
+	./killgmsv.rb		
+			
+####  로그를 카피＆rename			
+	ruby logda.rb gmsvlog log		
+	mv gmsvlog gmsvlog.old		
+#   일단 더미로 gmsvlog 를 작성.			
+	touch gmsvlog		
+			
+	echo "Stopped."		
+	echo		
+	;;		
+			
+			
+			
+#############  운용시의 통상 종료   ##################			
+  countdown)			
+#------- 만약을 위해, gmsv.end 를 지웁니다.-----			
+	if [ -f gmsv.end ]; then		
+		rm -f gmsv.end	
+	fi		
+			
+#---------- 우선, while.csh 로부터 멈춘다 --------			
+	echo "Stopping while.csh"		
+#---------    while.csh 의 프로세스 ID를 찾는다.--------------			
+	pid=`perl findpid.perl while.csh`		
+	echo "Process ID is: $pid"		
+#---------     while.csh 에 TERM 시그널을 보낸다.(정지 명령) ------			
+	kill -TERM "$pid"		
+			
+#--------  gmsv__ 의 프로세스 ID를 조사한다			
+	pid=`perl findpid.perl gmsv__`		
+#---------     gmsv__ 에 USR1 시그널을 보낸다.(카운트다운 개시) ------			
+	kill -USR1 "$pid"		
+#---------   gmsv__ 의 정지 처리를 한다. ------------			
+	echo "Shutdown Request gmsv server"		
+			
+			
+####   gmsv.end 를 할 수 있을 때까지 기다린다.			
+	until test -f gmsv.end;		
+	do		
+		sleep 1;	
+	done		
+			
+####  gmsv 의 스렛드를 전부 강제적으로 죽인다.			
+	./killgmsv.rb		
+			
+			
+####  로그를 카피＆rename			
+	ruby logda.rb gmsvlog log		
+	mv gmsvlog gmsvlog.old		
+#   일단 더미로 gmsvlog 를 작성.			
+	touch gmsvlog		
+	echo "Stopped."		
+	echo		
+	;;		
+			
+			
+  *)			
+        echo "Usage: gmsv.init {start|stop}"			
+        exit 1			
+esac			
+			
+exit 0			

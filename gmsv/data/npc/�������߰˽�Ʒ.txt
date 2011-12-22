@@ -1,0 +1,90 @@
+block item 795011 ==1
+window "\n\n　您要兑换第6组的奖品吗？",yes,no
+window_yes
+killitem 795011
+giveitem (301,302,303,304,305,306,307,308,309,310,311,312,313,314,315),1
+endwindow "\n\n　恭喜您，您已领到奖品，请收好!"
+
+block item 795012 ==1
+window "\n\n　您要兑换第7组的奖品吗？",yes,no
+window_yes
+killitem 795012
+giveitem (13607,13617,13627,13637,13647,13657,13667,13677,18939,18940,18941,18942,18943),1
+endwindow "\n\n　恭喜您，您已领到奖品，请收好!"
+
+block item 795013 ==1
+window "\n\n　您要兑换第8组的奖品吗？",yes,no
+window_yes
+killitem 795013
+		giveitem (13609,13619,13629,13639,13649,13659,13669,13679,18699,652204,652210),1
+		endwindow "\n\n　恭喜您，您已领到奖品，请收好!"
+
+block item 301 == 1
+killitem 301
+giveitem 18851
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 302 == 1
+killitem 302
+giveitem 18852
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 303 == 1
+killitem 303
+giveitem 18853
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 304 == 1
+killitem 304
+giveitem 18854
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 305 == 1
+killitem 305
+giveitem 18855
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 306 == 1
+killitem 306
+giveitem 18856
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 307 == 1
+killitem 307
+giveitem 18857
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 308 == 1
+killitem 308
+giveitem 18858
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 309 == 1
+killitem 309
+giveitem 18859
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 310 == 1
+killitem 310
+giveitem 18860
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 311 == 1
+killitem 311
+giveitem 18861
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 312 == 1
+killitem 312
+giveitem 18862
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 313 == 1
+killitem 313
+giveitem 18863
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 314 == 1
+killitem 314
+giveitem 18864
+endwindow "\n\n　水龙破烂装已兑换成功!"
+block item 315 == 1
+killitem 315
+giveitem 18865
+endwindow "\n\n　水龙破烂装已兑换成功!"
+
+block 
+endwindow "\n\n　这里是百人补偿奖品兑换点。"
+
+
+
+#剑    斧    枪    弓    杖    回力  小刀  盔    帽    铠    衣    袍    靴    鞋    盾
+#301   302   303   304   305   306   307   308   309   310   311   312   313   314   315
+#18851 18852 18853 18854 18855 18856 18857 18858 18859 18860 18861 18862 18863 18864 18865

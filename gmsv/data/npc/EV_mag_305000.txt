@@ -1,0 +1,52 @@
+#
+#미네갈 섬 스우 국 아켈파 성에 있는
+#룬다 국왕
+#
+
+################################################################################
+#
+################################################################################
+
+###　추천장을 가지고 있는 경우　###
+block Item 16223 >= 1
+	Window 21661,next
+	Window 21662,next
+	Window 21663,OK
+		Window_OK
+		KillItemall 16223
+		NowEvent 103 = 1
+
+### 훈５등 퀘스트용 처리 ###
+
+#엘 훈５등 퀘스트 클리어
+block EndEvent 115 == 1
+	Window 22598,next
+	Window 22599,OK
+		Window_OK
+			KillItemAll 16395
+			GiveItem 16402,1
+			EndEvent 53 = 1
+			NowEvent 115 = 0
+			EndEvent 115 = 0
+			CheckTitle
+#약속의 깃털을 가지고 있다면
+block Item 16396 >= 1
+	EndWindow 22600,OK
+#왕족의 증표를 가지고 있다면
+block Item 16395 >= 1
+	EndWindow 22601,OK
+#엘에서 훈５등 퀘스트를 진행 중이라면
+block NowEvent 115 == 1
+	Window 22602,next
+	Window 22603,next
+	Window 22604,next
+	Window 22605,OK
+		Window_OK ItemSpace == 0
+			EndWindow 10000
+		Window_OK
+			GiveItem 16395,1
+
+###　###
+block
+#\n\n　오오, 여행자 분인가. 잘 오셨소. 아무것도 없는 나라지만 천천히 쉬다 가시오.
+	EndWindow 15493,OK

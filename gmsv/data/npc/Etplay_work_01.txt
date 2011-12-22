@@ -1,0 +1,31 @@
+###判断同样的物品数量
+block Item 39548 >= 2
+systemmessage 300034
+
+block ItemDur 39548 == 1
+	Window 300016,yes,no,Cancel
+
+	Window_yes ItemDur 39548 == 1
+	Setfeverflg 1
+	killitem 39548
+		
+	systemmessage 300013
+
+	Window_no ItemDur 39548 == 1
+	Setfeverflg 0	
+	killitem 39548
+	systemmessage 300014
+
+block ItemDur 39548 >= 2
+	Window 300016,yes,no,Cancel
+
+	Window_yes ItemDur 39548 >= 2
+	Setfeverflg 1
+	SetDur 39548,-1		
+	systemmessage 300013
+
+	Window_no ItemDur 39548 >= 2
+	Setfeverflg 0	
+	SetDur 39548,-1
+	systemmessage 300014
+

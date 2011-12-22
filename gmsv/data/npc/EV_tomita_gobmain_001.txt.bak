@@ -1,0 +1,102 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　연설 고블린의 권
+
+###　우 클릭
+
+Block StrCmpChat == R
+
+	If Item_607914 >= 2
+		EndWindow 6160001
+		EndBlock
+
+	else
+		If Item_607914 >= 1 && Item_607915 >= 1
+			EndWindow 6160002
+			EndBlock
+
+		else
+			If Item_607914 >= 1
+				EndWindow 6160003
+				EndBlock
+
+			else
+				If Item_607915 >= 1 || Item_607916 >= 1
+					EndWindow 6160004
+					EndBlock
+
+				else
+					If Item_607917 >= 1
+						EndWindow 6160005
+						EndBlock
+
+					else
+						Window 6160006,NEXT
+						Window 6160007,NEXT
+						EndWindow 6160008
+						EndBlock
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+###　채팅 입력 정답（빨간고블린파란고블린노란고블린）
+
+Block StrCmpChat == 3004916
+
+	If Item_607914 >= 2
+		EndWindow 6160009
+		EndBlock
+
+	else
+		If Item_607914 >= 1 && Item_607915 >= 1
+			EndWindow 6160010
+			EndBlock
+
+		else
+			If Item_607914 >= 1
+				Window 6160011,NEXT
+				Window 6160012,OK
+
+					Window_OK Item_607915 >= 1
+						EndWindow 6160013
+						EndBlock
+
+					Window_OK Item_607914 >= 1 && ItemSpace >= 1
+						KillItemAll 607914
+						GiveItemEX 607915,1,"\n\n　어이, 소지품이 가득 찬 것 같군."
+						EndBlock
+
+					Window_OK Item_607914 >= 1
+						EndWindow 6160014
+						EndBlock
+
+					Window_OK
+						EndWindow 6160015
+						EndBlock
+
+			else
+				EndWindow 6160016
+
+			endif
+
+		endif
+
+	endif
+
+
+###　채팅 입력 오답
+
+Block StrCmpChat != 3004916
+	EndWindow 6160017
+
+
+
+

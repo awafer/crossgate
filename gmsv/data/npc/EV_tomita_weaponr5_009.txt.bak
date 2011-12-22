@@ -1,0 +1,104 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　스톨테의 권
+
+###　활직인이고 활작성 스킬레벨이 ５이상
+
+block JobAncestry == 230 && SkillLevel_203 >= 5
+
+
+#　빨간 휘슬을 소지
+	If Item_607950 >= 1
+		EndWindow 8740001
+		EndBlock
+
+
+#　암반수와 수유나무（２０개）를 소지
+	else
+
+		If Item_607949 >= 1 && Item_10100 >= 20
+			Window 8740002,NEXT
+			Window 8740003,OK
+
+				Window_OK Item_607949 >= 1 && Item_10100 >= 20 && ItemSpace >= 1
+					KillItemAll 607949
+					KillItem 10100,20
+					GiveItemEX 607950,1,"\n\n　당신 경우는 일단 소지품을 정리해야겠군.\n　빈 곳이 없어서 휘슬을 줄 수 없어."
+					EndBlock
+
+				Window_OK Item_607949 >= 1 && Item_10100 >= 20
+					EndWindow 8740004
+					EndBlock
+
+				Window_OK Item_607949 >= 1
+					EndWindow 8740005
+					EndBlock
+
+				Window_OK
+					EndWindow 8740006
+					EndBlock
+
+
+#　암반수는 소지하고 있지만, 수유나무가 부족
+		else
+
+			If Item_607949 >= 1
+				EndWindow 8740007
+				EndBlock
+
+
+#　주문서를 소지
+			else
+
+				If Item_607942 >= 1
+					EndWindow 8740008
+					EndBlock
+
+
+#　상기 아이템을 소지하고 있지 않음
+				else
+					Window 8740009,YES,NO
+
+						Window_YES
+							Window 8740010,NEXT
+							Window 8740011,OK
+
+								Window_OK ItemSpace >= 1
+									GiveItemEX 607942,1,"\n\n　당신의 경우는 우선 소지품의 정리로군.\n　빈 곳이 없어서 주문서를 줄 수 없어."
+									EndBlock
+
+								Window_OK
+									EndWindow 8740012
+									EndBlock
+
+						Window_NO
+							EndWindow 8740013
+							EndBlock
+
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　활직인이지만 활작성 스킬레벨이 ５미만
+
+block JobAncestry == 230
+	EndWindow 8740014
+
+
+
+###　활직인이 아니다
+
+block
+	EndWindow 8740015
+
+
+
+
+

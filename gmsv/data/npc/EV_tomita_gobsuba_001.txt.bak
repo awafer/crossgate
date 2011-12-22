@@ -1,0 +1,144 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　형님의 권
+
+###　특별우대패스Ａ를 소지
+block Item_607915 >= 1
+	Window 6290001,NEXT
+	EndWindow 6290002
+
+
+
+###　고블린 서포터 증명서를 소지
+block Item_607914 >= 1
+	EndWindow 6290003
+
+
+
+###　근무평가표를 소지
+
+#　복수
+block Item_607907 >= 2
+	EndWindow 6290004
+
+
+#　단수
+block Item_607907 ==1
+	If StampCount_607907 == 15
+		EndWindow 6290005
+		EndBlock
+
+	else
+		If StampCount_607907 == 12 || StampCount_607907 == 13 || StampCount_607907 == 14 || StampCount_607907 == 16 || StampCount_607907 == 17
+		EndWindow 6290006
+		EndBlock
+
+		else
+			If StampCount_607907 >= 21
+				Window 6290007,NEXT
+				Window 6290008,NEXT
+				Window 6290009,OK
+
+					Window_OK Item_607907 >= 1 && ItemSpace >= 1
+						KillItemAll 607907
+						GiveItemEX 607914,1,"\n\n　소지품이 가득 차서 줄 수 없잖아.\n　어떻게든 하라구."
+						EndBlock
+
+					Window_OK Item_607907 >= 1
+						EndWindow 6290010
+						EndBlock
+
+					Window_OK
+						EndWindow 6290011
+						EndBlock
+
+			else
+				Window 6290012,OK
+
+					Window_OK Item_607907 >= 1
+						KillItemAll 607907
+						EndBlock
+
+					Window_OK
+						EndBlock
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　특별우대패스Ｂ를 소지
+block Item_607916 >= 1
+	Window 6290013,YES,NO
+
+		Window_YES
+			Window 6290014,NEXT
+			Window 6290015,NEXT
+			Window 6290016,NEXT
+			Window 6290017,NEXT
+			Window 6290018,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607907,1,"\n\n　소지품이 가득 차서 줄 수 없잖아.\n　어떻게든 하라구."
+					AddStampCount 607907,+15
+
+				Window_OK
+					EndWindow 6290019
+
+		Window_NO
+			EndWindow 6290020
+
+
+
+###　우대입장권를 소지
+block Item_607917 >= 1
+	Window 6290021,YES,NO
+
+		Window_YES
+			Window 6290022,NEXT
+			Window 6290023,NEXT
+			Window 6290024,NEXT
+			Window 6290025,NEXT
+			Window 6290026,OK
+OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607907,1,"\n\n　소지품이 가득 차서 줄 수 없잖아.\n　어떻게든 하라구."
+					AddStampCount 607907,+15
+
+				Window_OK
+					EndWindow 6290027
+
+		Window_NO
+			EndWindow 6290028
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	Window 6290029,YES,NO
+
+		Window_YES
+			Window 6290030,NEXT
+			Window 6290031,NEXT
+			Window 6290032,NEXT
+			Window 6290033,NEXT
+			Window 6290034,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607907,1,"\n\n　소지품이 가득 차서 줄 수 없잖아.\n　어떻게든 하라구."
+					AddStampCount 607907,+15
+
+				Window_OK
+					EndWindow 6290035
+
+		Window_NO
+			EndWindow 6290036
+
+
+
+
+

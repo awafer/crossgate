@@ -1,0 +1,8 @@
+block
+
+window "\n\n要回到芙蕾亚吗？",yes,no
+	window_no
+	window_yes
+		Leavegroup
+		warp 0,100,310,346
+

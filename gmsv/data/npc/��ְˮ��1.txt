@@ -1,0 +1,10 @@
+block
+
+    Window "\n\n\n\n@c是否使用晋职水晶？",YES,NO
+
+Window_yes
+    KillItem 940125,1   
+    EndEvent 92 = 1
+    SystemMessage 802000
+
+    Window_no

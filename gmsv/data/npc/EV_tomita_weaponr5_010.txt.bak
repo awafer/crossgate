@@ -1,0 +1,185 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　도구점의 권
+
+###　워프용 아이템을 소지
+
+block Item_607950 >= 1 || Item_607951 >= 1
+	EndWindow 8760001
+
+
+
+###　모루, 나무망치, 톱, 숯자루, 부지깽이, 내화점토, 암반수 중 무엇이든 소지
+
+block Item_607943 >= 1 || Item_607944 >= 1 || Item_607945 >= 1 || Item_607946 >= 1 || Item_607947 >= 1 || Item_607948 >= 1 || Item_607949 >= 1
+
+	EndWindow 8760002
+
+
+
+###　주문서를 소지
+
+block Item_607942 >= 1
+
+
+#　검직인의 경우
+	If JobAncestry == 200
+		Window 8760003,OK
+
+			Window_OK Item_607942 >= 1 && ItemSpace >= 1
+				KillItemAll 607942
+				GiveItemEX 607943,1,"\n\n　훗, 소지품에 빈 곳이 없군. 거래불가능이다."
+				EndBlock
+
+			Window_OK Item_607942 >= 1
+				EndWindow 8760004
+				EndBlock
+
+			Window_OK
+				EndWindow 8760005
+				EndBlock
+
+
+#　창직인의 경우
+	else
+		If JobAncestry == 220
+			Window 8760006,OK
+
+				Window_OK Item_607942 >= 1 && ItemSpace >= 1
+					KillItemAll 607942
+					GiveItemEX 607944,1,"\n\n　훗, 소지품에 빈 곳이 없군. 거래불가능이다."
+					EndBlock
+
+				Window_OK Item_607942 >= 1
+					EndWindow 8760007
+					EndBlock
+
+				Window_OK
+					EndWindow 8760008
+					EndBlock
+
+
+#　도끼직인의 경우
+		else
+			If JobAncestry == 210
+				Window 8760009,OK
+
+					Window_OK Item_607942 >= 1 && ItemSpace >= 1
+						KillItemAll 607942
+						GiveItemEX 607945,1,"\n\n　훗, 소지품에 빈 곳이 없군. 거래불가능이다."
+						EndBlock
+
+					Window_OK Item_607942 >= 1
+						EndWindow 8760010
+						EndBlock
+
+					Window_OK
+						EndWindow 8760011
+						EndBlock
+
+
+#　부메랑직인의 경우
+			else
+				If JobAncestry == 250
+					Window 8760012,OK
+
+						Window_OK Item_607942 >= 1 && ItemSpace >= 1
+							KillItemAll 607942
+							GiveItemEX 607946,1,"\n\n　훗, 소지품에 빈 곳이 없군. 거래불가능이다."
+							EndBlock
+
+						Window_OK Item_607942 >= 1
+							EndWindow 8760013
+							EndBlock
+
+						Window_OK
+							EndWindow 8760014
+							EndBlock
+
+
+#　나이프직인의 경우
+				else
+					If JobAncestry == 260
+						Window 8760015,OK
+
+							Window_OK Item_607942 >= 1 && ItemSpace >= 1
+								KillItemAll 607942
+								GiveItemEX 607947,1,"\n\n　훗, 소지품에 빈 곳이 없군. 거래불가능이다."
+								EndBlock
+
+							Window_OK Item_607942 >= 1
+								EndWindow 8760016
+								EndBlock
+
+							Window_OK
+								EndWindow 8760017
+								EndBlock
+
+
+#　지팡이직인의 경우
+					else
+						If JobAncestry == 240
+							Window 8760018,OK
+
+								Window_OK Item_607942 >= 1 && ItemSpace >= 1
+									KillItemAll 607942
+									GiveItemEX 607948,1,"\n\n　훗, 소지품에 빈 곳이 없군. 거래불가능이다."
+									EndBlock
+
+								Window_OK Item_607942 >= 1
+									EndWindow 8760019
+									EndBlock
+
+								Window_OK
+									EndWindow 8760020
+									EndBlock
+
+
+#　활직인의 경우
+						else
+							If JobAncestry == 230
+								Window 8760021,OK
+
+									Window_OK Item_607942 >= 1 && ItemSpace >= 1
+										KillItemAll 607942
+										GiveItemEX 607949,1,"\n\n　훗, 소지품에 빈 곳이 없군. 거래불가능이다."
+										EndBlock
+
+									Window_OK Item_607942 >= 1
+										EndWindow 8760022
+										EndBlock
+
+									Window_OK
+										EndWindow 8760023
+										EndBlock
+
+#　상기 이외의 직업
+							else
+								EndWindow 8760024
+								EndBlock
+
+
+							endif
+
+						endif
+
+					endif
+
+				endif
+
+			endif
+
+		endif
+
+	endif
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	EndWindow 8760025
+
+
+
+
+

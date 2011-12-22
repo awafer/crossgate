@@ -1,0 +1,38 @@
+
+
+#5레벨 이하
+block Level < 5
+	
+	if EndFlg == 150
+	
+	EndWindow 9020005
+
+	else
+
+	Window 9020003,Next
+	Window 9020004,Yes,No
+		Window_Yes
+			EndFlg 32
+			Window 9020005,OK
+				
+
+		Window_No
+			EndWindow 9020008
+
+############
+block 
+	Window 23227,Next
+	Window 23228,Next
+
+	Window 3430003,Next
+	Window 3430004,Next
+
+	Window 23229,OK
+		Window_OK
+			globalFlag26 = 1
+			LeaveGroup
+			Warp 0,59721,309,136
+
+
+
+

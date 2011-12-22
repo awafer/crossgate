@@ -1,0 +1,6 @@
+block
+window"\n\n\n\n　　　　　　　要传送到职业技能屋吗?",yes,no
+Window_yes
+Warp 0,59162,7,9
+Window_no
+Endblock

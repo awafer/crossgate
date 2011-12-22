@@ -1,0 +1,5 @@
+#외톨이 용의 말예
+
+block
+	Window 21894,Next
+	EndWindow 21895,OK

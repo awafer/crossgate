@@ -1,0 +1,152 @@
+#　수확제 던젼（구 여름방학 던젼：서브Ｂ）　　ｂｙ　토미타
+#
+#　　　수확제의 사자의 권
+
+###　부스트 허브SP를 소지
+
+block Item_607685 >= 1
+	Window 8500001,NEXT
+	EndWindow 8500002
+
+
+
+###　대풍작의 계시를 여러 개 소지
+
+block Item_607940 >= 2
+	EndWindow 8500003
+
+
+
+###　대풍작의 계시를 １개소지（입수후１０분 미만）
+
+block Item_607940 == 1 && ItemCreateTime_607940 < 10
+	EndWindow 8500004
+
+
+
+###　대풍작의 계시를 １개소지（입수후１０분 이상 경과）
+
+block Item_607940 == 1 && ItemCreateTime_607940 >= 10
+	Window 8500005,OK
+
+		Window_OK Item_607940 >= 2
+			EndWindow 8500006
+
+		Window_OK Item_607940 == 1 && ItemCreateTime_607940 < 10
+			EndWindow 8500007
+
+		Window_OK Item_607940 == 1 && ItemCreateTime_607940 >= 10 && ItemSpace >= 1
+			KillItemAll 607940
+			GiveItem (15309%55,607685%25,608607%20)
+
+		Window_OK Item_607940 == 1
+			EndWindow 8500008
+
+		Window_OK
+			EndWindow 8500009
+
+
+
+###　풍작의 계시를 여러 개소지
+
+block Item_607939 >= 2
+	EndWindow 8500010
+
+
+
+###　풍작の계시를 １개소지（입수후１０분 미만）
+
+block Item_607939 == 1 && ItemCreateTime_607939 < 10
+	EndWindow 8500011
+
+
+
+###　풍작의 계시를 １개소지（입수후１０분 이상 경과）
+
+block Item_607939 == 1 && ItemCreateTime_607939 >= 10
+	Window 8500012,OK
+
+		Window_OK Item_607939 >= 2
+			EndWindow 8500013
+
+		Window_OK Item_607939 == 1 && ItemCreateTime_607939 < 10
+			EndWindow 8500014
+
+		Window_OK Item_607939 == 1 && ItemCreateTime_607939 >= 10 && ItemSpace >= 1
+			KillItemAll 607939
+			GiveItem (15309%60,608604%30,607685%10)
+
+		Window_OK Item_607939 == 1
+			EndWindow 8500015
+
+		Window_OK
+			EndWindow 8500016
+
+
+
+###　순미음양 밥벌레를 소지
+
+block Item_607938 >= 1
+	EndWindow 8500017
+
+
+
+###　고개의 수제 경단을 소지
+
+block Item_607937 >= 1
+	EndWindow 8500018
+
+
+
+###　오곡신의 계시를 소지
+
+block Item_607936 >= 1
+	Window 8500019,NEXT
+	Window 8500020,YES,NO
+
+		Window_YES
+			Window 8500021,OK
+
+				Window_OK Item_607936 >= 1 && ItemSpace >= 1
+					GiveItemEX 607937,1,"\n\n　어라, 줄 수 없군. 소지품이 가득 찬 것 같아."
+
+				Window_OK Item_607936 >= 1
+					EndWindow 8500022
+
+				Window_OK
+					EndWindow 8500023
+
+		Window_NO
+			EndWindow 8500024
+
+
+
+###　공양미를 소지
+
+block Item_607935 >= 1
+	EndWindow 8500025
+
+
+
+###　상기 아이템을 소지하지 않음
+
+block
+	Window 8500026,NEXT
+	Window 8500027,YES,NO
+
+		Window_YES
+			Window 8500028,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607935,1,"\n\n　어라, 줄 수 없군. 소지품이 가득 찬 것 같아."
+
+				Window_OK
+					EndWindow 8500029
+
+		Window_NO
+			EndWindow 8500030
+
+
+
+
+

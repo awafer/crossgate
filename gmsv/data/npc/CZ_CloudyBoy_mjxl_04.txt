@@ -1,0 +1,15 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Item 940115 == 1
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block Level >= 30 && ItemSpace >= 1 &&  Item 940110 == 1
+
+	Window "\n\n\n@c　恩。不错。拥有冥界气息的人类。你来找我做什么？\n哦？想提升职位是么？",yes,no
+	Window_yes ItemSpace >= 1
+	GiveItem 940115,1
+	EndWindow "\n\n\n@c　不错，很有上进心。好吧！\n\n我的权利只是负责在这里监视神界的动静、测试的事。\n你去找哈巴斯吧！~"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

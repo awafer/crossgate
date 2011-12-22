@@ -1,0 +1,22 @@
+block
+	Window "\n\n 哈哈,升级找我就对了!看你长的还挺标致卖个人情给你...费用50000",YES,no
+                Window_YES Gold < 50000
+	EndWindow 10005
+	Window_YES
+	AddGold -50000
+	LeaveGroup
+              	warp 0,32026,50,36
+                Window_NO
+	Window "\n\n 你说什么?!我抢劫?!!刚才小样的漫步雲端就被我飞了!你也来找死?!",YES,no
+                Window_YES
+              	encount 3|0,1000,62,88|||||0|||350113|||||||||
+                Window_NO
+                Window "\n\n哎,我也是没有办法......都是为了混口饭吃...算了,10000块让你过去好了!",YES,no
+                Window_YES Gold < 10000
+	EndWindow 10005
+	Window_YES
+	AddGold -10000
+	LeaveGroup
+              	warp 0,32026,50,36
+                Window_NO
+                EndWindow "\n\n 什么?10000都没有!你不死也没用了...!!!",OK

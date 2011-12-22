@@ -1,0 +1,12 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Level >= 30 && Item 940110 == 1 && Item 940115 == 1
+
+	KillItem 940110,1
+	KillItem 940115,1
+	GiveItem 940111,1
+	EndWindow "\n\n\n@c　不错！我只出了三分力，没想到人类会打赢我。好吧，就让你提升吧！"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

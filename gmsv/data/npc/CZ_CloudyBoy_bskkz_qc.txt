@@ -1,0 +1,13 @@
+#变身卡任务扩展 CloudyBoy编写于20070801 http://www.CloudyBoy.com
+
+
+#####糖果换取变身卡 ################
+block Item 653000 >= 1
+	KillItemall 653000
+	Window 8010000,OK
+
+	Window_OK
+	Warp 0,717,2,2
+#############接任务 ######################
+block Item 653000 >= 0
+	EndWindow 8010001,OK

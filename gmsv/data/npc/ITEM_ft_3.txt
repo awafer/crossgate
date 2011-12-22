@@ -1,0 +1,9 @@
+block
+  Window 777777,Yes,No
+      Window_Yes Item 777776 == 1
+          Play_Se 280,320,240
+          KillItem 777776,1,(4420)
+          AddFame 10000
+          SystemMessage 777776
+      Window_Yes
+      Window_No

@@ -1,0 +1,117 @@
+#고블린의 요새　　ｂｙ　토미타
+#
+#　　　마나의 권
+
+###　특별우대패스Ｂ를 소지
+block Item_607916 >= 1
+	EndWindow 6460001
+
+
+
+###　마나의 하모니카를 소지
+block Item_607922 >= 1
+	EndWindow 6460002
+
+
+
+###　고브링의 오카리나를 소지
+block Item_607921 >= 1
+	Window 6460003,NEXT
+	Window 6460004,NEXT
+	Window 6460005,NEXT
+	Window 6460006,YES,NO
+
+		Window_YES
+
+			Window 6460007,NEXT
+			Window 6460008,OK
+
+				Window_OK Item_607921 >= 1 && ItemSpace >= 3
+					KillItemAll 607921
+					GiveItemEX 607922,1,"\n\n　뭐야, 소지품이 가득 찼잖아!\n　한심해, 소지품 정리도 못하는 거야?\n　빨리 어떻게든 하라구!"
+					GiveItemEX 607917,2,"\n\n　뭐야, 소지품이 가득 찼잖아!\n　한심해, 소지품 정리도 못하는 거야?\n　빨리 어떻게든 하라구!"
+
+				Window_OK Item_607921 >= 1
+					EndWindow 6460009
+
+				Window_OK
+					EndWindow 6460010
+
+		Window_NO
+
+			Window 6460011,OK
+
+				Window_OK Item_607921 >= 1
+					KillItemAll 607921
+
+				Window_OK
+
+
+
+###　고브링의 비약을 소지
+block Item_607920 >= 1
+	EndWindow 6460012
+
+
+
+###　귀여운 메달을 소지
+block Item_607919 >= 1
+	Window 6460013,NEXT
+	Window 6460014,YES,NO
+
+		Window_YES
+
+			Window 6460015,NEXT
+			Window 6460016,OK
+
+				Window_OK Item_607919 >= 1 && ItemSpace >= 1
+					KillItemAll 607919
+					GiveItemEX 607920,1,"\n\n　뭐야, 소지품이 가득 찼잖아!\n　한심해, 소지품 정리도 못하는 거야?\n　빨리 어떻게든 하라구!"
+
+				Window_OK Item_607919 >= 1
+					EndWindow 6460017
+
+				Window_OK
+					EndWindow 6460018
+
+		Window_NO
+
+			Window 6460019,OK
+
+				Window_OK Item_607919 >= 1
+					KillItemAll 607919
+
+				Window_OK
+
+
+
+###　마나의 편지를 소지
+block Item_607918 >= 1
+	EndWindow 6460020
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	Window 6460021,NEXT
+	Window 6460022,YES,NO
+
+		Window_YES
+
+			Window 6460023,NEXT
+			Window 6460024,NEXT
+			Window 6460025,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607918,1,"\n\n　뭐야, 소지품이 가득 찼잖아!\n　한심해, 소지품 정리도 못하는 거야?\n　빨리 어떻게든 하라구!"
+
+				Window_OK
+					EndWindow 6460026
+
+		Window_NO
+			EndWindow 6460027
+
+
+
+
+

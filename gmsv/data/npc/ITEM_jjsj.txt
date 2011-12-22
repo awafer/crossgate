@@ -1,0 +1,14 @@
+block
+
+    Window "\n\n\n\n@c是否使用晋职水晶？",YES,NO
+
+Window_yes
+    KillItem 777776,1   //使用后删除物品
+    EndEvent 93 = 1   //打完树精长老
+    EndEvent 92 = 1  //打完神兽
+    EndEvent 5 == 1   //打完UD
+    EndEvent 91 = 1  //打完双王
+    EndEvent 90 = 1  //4转
+    SystemMessage 8100004 //自己改一个，是使用后出现的文字
+
+    Window_no

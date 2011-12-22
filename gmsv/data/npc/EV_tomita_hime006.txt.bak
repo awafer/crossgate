@@ -1,0 +1,44 @@
+#　잠 못 드는 숲의 미녀　　ｂｙ　토미타
+#
+#　　　노인（엔딩）의 권
+
+###　파티를 이루고 있다
+
+block Group >= 2
+
+	EndWindow 6860001
+
+
+###　이어링을 가지고 있다
+
+block Item_603000 >= 1
+	EndWindow 6860002
+
+
+###　소지품에 빈 곳이 있다
+
+block ItemSpace >= 1
+	Window 6860003,OK
+
+		Window_OK Group < 2 && ItemSpace >= 1
+			GiveItemEX 603000,1,"\n\n　어라, 소지품이 가득 차서 줄 수 없군."
+			Warp 0,59502,196,52
+
+		Window_OK ItemSpace >= 1
+			EndWindow 6860004
+
+		Window_OK
+			EndWindow 6860005
+
+
+###　소지품이 가득 참
+
+block
+	EndWindow 6860006
+
+
+EndBlock
+
+
+
+

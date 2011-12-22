@@ -1,0 +1,58 @@
+#LV50벌이장소 퀘스트　　ｂｙ　토미타
+#
+#　　　기사 크래프트의 권
+
+###　머나먼 별의 반지（607965）를 소지
+block Item_607965 >= 1
+	GAWindow 7620001,NEXT
+	GAWindow 7620002,NEXT
+	GAWindow 7620003,OK
+
+		Window_OK Item_607965 >= 1
+			KillItemAll 607965,(3004831)
+			Encount 3|0,59715,192,18||0|||||0|305222|||||||||
+
+		Window_OK
+			GAWindow 7620004,OK
+
+
+
+###　검의 목걸이（607964）를 소지
+block Item_607964 >= 1
+	GAWindow 7620005,NEXT
+	GAWindow 7620006,OK
+
+
+
+###　독수리 날개의 팔찌（607963）를 소지
+block Item_607963 >= 1
+	GAWindow 7620007,OK
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	GAWindow 7620008,NEXT
+	GAWindow 7620009,YES,NO
+
+		Window_YES ItemSpace >= 1
+			GAWindow 7620010,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607963,1,"\n\n　그 마음은 고맙지만, 팔찌를 줄 수 없군,\n　정리해주게."
+
+				Window_OK
+					GAWindow 7620011,OK
+
+		Window_YES
+			GAWindow 7620012,OK
+
+		Window_NO
+			GAWindow 7620013,OK
+
+
+
+
+
+
+

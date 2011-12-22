@@ -1,0 +1,15 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Item 940114 == 1
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block Level >= 10 && ItemSpace >= 1 &&  StrCmpChat == 8010100
+
+	Window "\n\n\n@c　恩？加入我们？你愿意接受生与死的考验么？",yes,no
+	Window_yes ItemSpace >= 1
+	GiveItem 940114,1
+	EndWindow "好。我给你开一张证明。你去找统领大人。接受考验吧！很难的哦~"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

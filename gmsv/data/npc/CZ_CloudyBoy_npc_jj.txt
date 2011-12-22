@@ -1,0 +1,17 @@
+block Job >= 201 && Job <= 477 && Jobrank == 0 
+	EndEvent 93 = 1
+	Window 8010002,YES,NO
+	Window_YES
+	warp 0,2303,22,14
+
+block Job >= 201 && Job <= 477 && JobRank == 1
+	EndEvent 92 = 1
+	Window 8010003,YES,NO
+	Window_YES
+	warp 0,2303,22,14
+
+block Job >= 201 && Job <= 477 && Jobrank == 2 
+	EndEvent 91 = 1
+	Window 8010004,YES,NO
+	Window_YES
+	warp 0,2303,22,14

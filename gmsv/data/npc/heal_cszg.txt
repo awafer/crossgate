@@ -1,0 +1,17 @@
+block
+	Window 888808,YES,NO
+	Window_NO
+	EndWindow 888806,OK
+	Window_YES Gold <= 999
+	EndWindow 888806,OK
+	Window_YES Gold >= 1000
+	AddGold -1000
+	NowEvent 94 = 1
+	NowEvent 95 = 1
+	NowEvent 96 = 1
+	NowEvent 97 = 1
+	NowEvent 98 = 1
+	NowEvent 99 = 1
+	NowEvent 100 = 1
+	NowEvent 101 = 1
+	SystemMessage 888809,OK

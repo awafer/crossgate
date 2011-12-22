@@ -1,0 +1,20 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+#block Level >= 70 && Item 940113 == 1 && Item 940123 == 1
+
+#	Window "\n\n\n@c　就由我来代替冥主大人赐予你神位吧！",Next
+#	KillItem 940123,1
+	EndWindow "\n\n\n@c　回家老实过日子吧。。。"
+
+#block Item 940123 == 1
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+#block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block
+	Window "\n\n\n@c　需要我送你出去么？",yes
+	Window_yes
+	LeaveGroup
+	Warp 0,1000,233,78

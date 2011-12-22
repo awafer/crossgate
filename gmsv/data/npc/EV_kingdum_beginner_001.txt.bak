@@ -1,0 +1,26 @@
+
+block 
+	if Level >= 5
+		EndWindow 9020000
+
+	else if Group >= 2
+		EndWindow 9020001
+
+	else 
+	Window 9020002,OK
+		Window_OK Group >= 2
+			EndWindow 9020001
+
+
+		Window_OK
+	
+			Encount 3|||0|||||0|400000|||||||||
+
+
+
+
+
+
+
+
+

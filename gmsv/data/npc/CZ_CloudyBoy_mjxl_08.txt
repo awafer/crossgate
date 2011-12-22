@@ -1,0 +1,20 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Level >= 50 && ItemSpace >= 1 &&  Item 940111 == 1 &&  Item 940116 == 1 &&  Item 940117 == 1
+
+	Window "\n\n\n@c　恩！不错。给我吧。",next
+	KillItem 940116,1
+	GiveItem 940118,1
+	EndWindow "\n\n\n@c　哼！老不死弄了个假东西！杀了他！！"
+
+block Level >= 50 && Item 940111 == 1 && Item 940117 == 1 && Item 940119 == 1
+
+	KillItem 940111,1
+	KillItem 940117,1
+	KillItem 940119,1
+	GiveItem 940112,1
+	EndWindow "\n\n\n@c　不错不错，是它。给你属于你的东西吧。"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

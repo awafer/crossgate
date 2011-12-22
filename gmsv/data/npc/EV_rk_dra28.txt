@@ -1,0 +1,26 @@
+#용의 상（훅）
+#15552	자문의 성채 입구 남쪽으로 워프
+
+#
+
+### 의지를 가지고 있다 ###
+block Item 18780 >= 1 || Item 18781 >= 1 || Item 18782 >= 1
+Changepal 2,180
+ Endwindow 21338
+
+block Item 18783 >= 1 || Item 18784 >= 1
+Changepal 2,180
+#\n\n\n\n@c　그 펜던트의 힘이 있으면 볼일은 없을테지.
+	Endwindow 21347
+
+block
+Changepal 2,180
+#\n\n
+	Window 21345,NEXT
+	Window 21346,YES,NO
+	Window_YES
+        LeaveGroup
+	GiveItem 18784,1
+	Warp 0,15552,14,39
+	Window_NO
+

@@ -1,0 +1,44 @@
+#　석실의 칠현　　ｂｙ　토미타
+#
+#　　　류레이의 권
+
+###　나이프직인이고 나이프작성 스킬레벨이 ５이상
+block JobAncestry == 260 && SkillLevel_206 >= 5
+	Window 8810001,OK
+
+		Window_OK
+			GiveRecipe 384
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+###　나이프직인이지만 나이프작성 스킬레벨이 ５미만
+block JobAncestry == 260
+	Window 8810002,OK
+
+		Window_OK
+			LeaveGroup
+			Warp 0,59679,163,191
+
+
+
+
+###　나이프직인이 아니다
+block
+	Window 8810003,YES,NO
+
+		Window_YES
+			Window 8810004,OK
+
+				Window_OK
+					LeaveGroup
+					Warp 0,59679,163,191
+
+		Window_NO
+			EndWindow 8810005
+
+
+
+
+

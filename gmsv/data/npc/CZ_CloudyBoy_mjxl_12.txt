@@ -1,0 +1,16 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Item 940121 == 1
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block Level >= 70 && Item 940112 == 1
+
+	GiveItem 940121,1
+	Window "\n\n\n@c　很好。冥主会得意的。",ok
+	Window_ok
+	LeaveGroup
+	Warp 0,718,15,18
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

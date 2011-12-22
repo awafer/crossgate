@@ -1,0 +1,14 @@
+#冥界系列任务脚本 CloudyBoy编写于20070814 http://www.CloudyBoy.com
+
+############## 任务内容开始 ##############
+block Level >= 70 && Item 940112 == 1
+
+	Window "\n\n\n@c　你们来了！一起上吧。看看你们的实力！",ok
+	Window_ok
+	Encount 3|0,2307,14,10|||||0|||350067|||||||||
+
+block Item 940112 == 1
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"
+
+block
+	EndWindow "\n\n\n@c　你好。有什么可以服务的么？"

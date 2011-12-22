@@ -1,0 +1,21 @@
+block item 795010 == 0  && item 795013 == 1
+		window "\n\n　恭喜您取得了第十组的胜利。\n　请收好您的道场卷。",ok
+	window_ok itemspace >=1
+		LeaveGroup
+		killitem 795013
+		giveitem 795010
+		warp 0,1000,230,80
+	window_ok itemspace == 0
+		endwindow "\n\n　您的东西太多了。"
+
+block item 795013 == 0 && item 795010 == 0
+		window "\n\n　恭喜您取得了第九组的胜利。\n　请收好您的道场卷。",ok
+	window_ok itemspace >= 1
+		giveitem 795010
+		warp 0,1000,230,80
+	window_ok itemspace == 0
+		endwindow "\n\n　您的东西太多了。"
+
+block item 795013 >= 1
+		window "\n\n　你已经有本组的道场卷了，我不能再给你了哦。\n\n　用掉后再拿吧　：）",ok
+	window_ok

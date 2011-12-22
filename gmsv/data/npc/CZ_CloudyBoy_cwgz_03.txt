@@ -1,0 +1,24 @@
+#宠物再次改造脚本 CloudyBoy编写于20070806 http://www.CloudyBoy.com
+
+
+
+######### 没有任务道具 ##########
+
+block Item 940002 != 1
+	EndWindow 8010031
+#\n有何贵干？
+
+########## 回答问题并更换任务道具 ##########
+
+block StrCmpChat == 8010014 && ItemSpace >= 1
+
+	KillItem 940002,1
+	GiveItem 940003,1
+	EndWindow 8010033
+#\n快点踏上旅途吧。
+
+########## 携带任务道具 ##########
+
+block Item 940002 == 1
+	EndWindow 8010013
+#\n圣拉鲁卡村中卖武器的人是？

@@ -1,0 +1,56 @@
+#LV50벌이장소 퀘스트　　ｂｙ　토미타
+#
+#　　　기사 하워드의 권
+
+###　독수리 날개의 팔찌（607963）를 소지
+block Item_607963 >= 1
+	GAWindow 7580001,NEXT
+	GAWindow 7580002,NEXT
+	GAWindow 7580003,OK
+
+		Window_OK Item_607963 >= 1
+			KillItemAll 607963,(3004829)
+			Encount 3|0,59715,194,17||0|||||0|305222|||||||||
+
+		Window_OK
+			GAWindow 7580004,OK
+
+
+
+###　머나먼 별의 반지（607965）를 소지
+block Item_607965 >= 1
+	GAWindow 7580005,NEXT
+	GAWindow 7580006,OK
+
+
+
+###　검의 목걸이（607964）를 소지
+block Item_607964 >= 1
+	GAWindow 7580007,OK
+
+
+
+###　상기 아이템을 소지하지 않음
+block
+	GAWindow 7580008,NEXT
+	GAWindow 7580009,YES,NO
+
+		Window_YES ItemSpace >= 1
+			GAWindow 7580010,OK
+
+				Window_OK ItemSpace >= 1
+					GiveItemEX 607964,1,"\n\n　단서를 주고 싶지만, 소지품에 빈 곳이 없군.\n　단서가 없으면 탐색은 어려워.\n　다른 사람에게 부탁하도록 하지."
+
+				Window_OK
+					GAWindow 7580011,OK
+
+		Window_YES
+			GAWindow 7580012,OK
+
+		Window_NO
+			GAWindow 7580013,OK
+
+
+
+
+
